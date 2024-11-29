@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Converter</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>Base64 Converter Tool</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Encode to Base64</h2>
+            <textarea id="inputText" placeholder="Enter text here..."></textarea>
+            <button onclick="encodeBase64()">Convert</button>
+            <h3>Base64 Encoded Output:</h3>
+            <textarea id="outputText" readonly></textarea>
+        </section>
+        <section>
+            <h2>Decode from Base64</h2>
+            <textarea id="inputBase64" placeholder="Enter Base64 here..."></textarea>
+            <button onclick="decodeBase64()">Decode</button>
+            <h3>Decoded Output:</h3>
+            <textarea id="outputDecodedText" readonly></textarea>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 mr-hdk</p>
+    </footer>
+
+    <script>
+        function encodeBase64() {
+            var inputText = document.getElementById('inputText').value;
+            var encoded = btoa(inputText);
+            document.getElementById('outputText').value = encoded;
+        }
+
+        function decodeBase64() {
+            var inputBase64 = document.getElementById('inputBase64').value;
+            try {
+                var decoded = atob(inputBase64);
+                document.getElementById('outputDecodedText').value = decoded;
+            } catch (e) {
+                alert("Invalid Base64 string");
+            }
+        }
+    </script>
+</body>
+</html>
