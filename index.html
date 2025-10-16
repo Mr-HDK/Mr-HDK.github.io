@@ -12,33 +12,62 @@
 </head>
 <body>
     <!-- Theme toggle button -->
-    <button id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    <button id="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon"><i class="fa-solid fa-moon"></i></span>
+        <span class="toggle-label">Shift&nbsp;Mode</span>
+        <span class="toggle-glow"></span>
+    </button>
 
     <!-- Hero section -->
     <header id="hero">
-        <div class="hero-content">
-            <p class="location"><i class="fa-solid fa-location-dot"></i> Tunisia · Remote-friendly</p>
-            <h1>Youssef&nbsp;Haddouk</h1>
-            <p class="tagline">Cybersecurity guardian, DevSecOps accelerator, and embedded systems tinkerer fuelled by curiosity.</p>
-            <div class="hero-actions">
-                <a href="#mission" class="btn primary-btn">Enter&nbsp;Mission&nbsp;Deck</a>
-                <a href="https://github.com/Mr-HDK" target="_blank" class="btn secondary-btn">View&nbsp;Code&nbsp;Labs</a>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <p class="location"><i class="fa-solid fa-location-dot"></i> Tunisia · Remote-friendly</p>
+                <div class="hero-title-stack">
+                    <h1>Youssef&nbsp;Haddouk</h1>
+                    <p class="hero-subtitle">Cybersecurity sentinel · DevSecOps accelerator · Embedded experience shaper</p>
+                </div>
+                <div class="hero-pillars">
+                    <div class="pillar">
+                        <h2>Secure Systems Maestro</h2>
+                        <p>Leads SOC fortification, purple-team drills, and post-incident forensics to keep missions resilient.</p>
+                    </div>
+                    <div class="pillar">
+                        <h2>Automation Catalyst</h2>
+                        <p>Designs SSDLC guardrails, observability flywheels, and AI-assisted scripting to accelerate delivery.</p>
+                    </div>
+                    <div class="pillar">
+                        <h2>Embedded Visionary</h2>
+                        <p>Blends STM32, IoT security, and full-stack UX so hardware experiences feel cloud-smart.</p>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#mission" class="btn primary-btn scroll-btn">
+                        <span>Enter&nbsp;Mission&nbsp;Deck</span>
+                        <span class="btn-icon-circle" aria-hidden="true"><i class="fa-solid fa-angles-down"></i></span>
+                    </a>
+                    <a href="https://github.com/Mr-HDK" target="_blank" class="btn secondary-btn">
+                        <i class="fa-brands fa-github"></i>
+                        <span>View&nbsp;Code&nbsp;Labs</span>
+                    </a>
+                </div>
+                <div class="hero-highlights">
+                    <span><i class="fa-solid fa-trophy"></i> Top 0.1% · TryHackMe</span>
+                    <span><i class="fa-solid fa-medal"></i> Hackathon SPOT · 3<sup>rd</sup> place</span>
+                    <span><i class="fa-solid fa-tower-broadcast"></i> SOC architect &amp; AKS moderniser</span>
+                    <span><i class="fa-solid fa-code"></i> 12+ scripting &amp; coding dialects</span>
+                </div>
             </div>
-            <div class="hero-highlights">
-                <span><i class="fa-solid fa-trophy"></i> Top 0.1% · TryHackMe</span>
-                <span><i class="fa-solid fa-medal"></i> Hackathon SPOT · 3<sup>rd</sup> place</span>
-                <span><i class="fa-solid fa-chart-line"></i> SOC architect &amp; AKS moderniser</span>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="holo-grid">
-                <div class="holo-ring"></div>
-                <div class="holo-ring"></div>
-                <div class="holo-ring"></div>
-                <div class="holo-core">
-                    <span class="callout">Systems Security<br>Master</span>
-                    <span class="callout">QA Automation<br>Lecturer</span>
-                    <span class="callout">Embedded<br>Innovator</span>
+            <div class="hero-media" aria-hidden="true">
+                <div class="portrait-frame">
+                    <img src="assets/youssef-portrait.svg" alt="Portrait of Youssef Haddouk" loading="lazy">
+                    <span class="portrait-tag">Systems security master on automation liftoff</span>
+                </div>
+                <div class="hero-orbits">
+                    <span>DevSecOps</span>
+                    <span>IoT&nbsp;Security</span>
+                    <span>Scripting</span>
+                    <span>Mission&nbsp;Design</span>
                 </div>
             </div>
         </div>
@@ -66,7 +95,8 @@
                 Armed with a Master's in Information Systems Security and hands-on leadership across
                 SOC, DevSecOps, and automation initiatives, I help teams ship resilient products faster.
                 My playground spans from Azure-powered Kubernetes fleets to STM32 boards, where I design
-                experiences that are secure, observable, and delightful to use.
+                experiences that are secure, observable, and delightful to use. From purple-team scripting
+                to hardware hardening, every layer is tuned for visibility and speed.
             </p>
             <div class="stat-grid" data-animate="stats">
                 <article class="stat-card">
@@ -74,8 +104,8 @@
                     <span class="stat-label">Security tools mastered</span>
                 </article>
                 <article class="stat-card">
-                    <span class="stat-number" data-target="12">0</span>
-                    <span class="stat-label">Programming &amp; scripting languages</span>
+                    <span class="stat-number" data-target="14">0</span>
+                    <span class="stat-label">Programming, scripting &amp; automation dialects</span>
                 </article>
                 <article class="stat-card">
                     <span class="stat-number" data-target="6">0</span>
@@ -91,6 +121,7 @@
                 <span class="pill"><i class="fa-solid fa-gears"></i> Test Automation Strategy</span>
                 <span class="pill"><i class="fa-solid fa-diagram-project"></i> Infrastructure as Code</span>
                 <span class="pill"><i class="fa-solid fa-wave-square"></i> Embedded &amp; IoT R&amp;D</span>
+                <span class="pill"><i class="fa-solid fa-satellite-dish"></i> Hardware &amp; IoT Security</span>
                 <span class="pill"><i class="fa-solid fa-brain"></i> AI-assisted Threat Hunting</span>
             </div>
         </section>
@@ -170,6 +201,24 @@
         <section id="skill-nebula" class="section">
             <h2>Skill&nbsp;Nebula</h2>
             <p>Choose a constellation to explore how I blend languages, tools, and frameworks across missions.</p>
+            <div class="skill-spotlight">
+                <article>
+                    <h3><i class="fa-solid fa-terminal"></i> Scripting Arsenal</h3>
+                    <p>Python · Bash · PowerShell · Go · JavaScript/TypeScript · SQL · Terraform · YAML · CLI wizardry for rapid prototyping.</p>
+                </article>
+                <article>
+                    <h3><i class="fa-solid fa-microchip"></i> Hardware&nbsp;&amp;&nbsp;IoT Security</h3>
+                    <p>STM32 · ESP32 · Arduino · MQTT · IoT hardening · Hardware forensics · Firmware threat modeling.</p>
+                </article>
+                <article>
+                    <h3><i class="fa-solid fa-layer-group"></i> Full-Stack &amp; Vibe Coding</h3>
+                    <p>Angular · Node.js · Express.js · PHP · MySQL · MongoDB · Firebase · Bootstrap · Vibe coding to craft joyful user journeys.</p>
+                </article>
+                <article>
+                    <h3><i class="fa-solid fa-robot"></i> AI &amp; Autonomous Research</h3>
+                    <p>OpenWebUI · LLaMA · RAG workflows · NVIDIA Transformer labs · Splunk SOAR automation for intelligent response.</p>
+                </article>
+            </div>
             <div class="nebula-grid">
                 <aside class="nebula-panel">
                     <div class="nebula-buttons" id="nebula-buttons"></div>
@@ -279,6 +328,36 @@
                     <p>Create SHA‑256 hashes of strings for checksums or password hashing.</p>
                     <a href="tools/hash.html" class="btn secondary-btn">Use Tool</a>
                 </article>
+                <article class="card">
+                    <div class="icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                    <h3>JWT Inspector</h3>
+                    <p>Decode JSON Web Tokens safely to review headers and claims.</p>
+                    <a href="tools/jwt.html" class="btn secondary-btn">Use Tool</a>
+                </article>
+                <article class="card">
+                    <div class="icon"><i class="fa-solid fa-waveform-lines"></i></div>
+                    <h3>UUID Forge</h3>
+                    <p>Generate traceable batches of UUIDv4 identifiers for lab systems.</p>
+                    <a href="tools/uuid.html" class="btn secondary-btn">Use Tool</a>
+                </article>
+                <article class="card">
+                    <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Password Pulse</h3>
+                    <p>Measure password entropy, hints, and remediation ideas instantly.</p>
+                    <a href="tools/password.html" class="btn secondary-btn">Use Tool</a>
+                </article>
+                <article class="card">
+                    <div class="icon"><i class="fa-solid fa-route"></i></div>
+                    <h3>CIDR Navigator</h3>
+                    <p>Map network ranges, host capacity, and broadcast zones from CIDR blocks.</p>
+                    <a href="tools/cidr.html" class="btn secondary-btn">Use Tool</a>
+                </article>
+                <article class="card">
+                    <div class="icon"><i class="fa-solid fa-link"></i></div>
+                    <h3>URL&nbsp;Encoder</h3>
+                    <p>Encode or decode URLs to debug webhook calls and HTTP payloads.</p>
+                    <a href="tools/urlencode.html" class="btn secondary-btn">Use Tool</a>
+                </article>
             </div>
         </section>
 
@@ -321,20 +400,50 @@
         <!-- Blog section -->
         <section id="blog" class="section">
             <h2>Blog</h2>
-            <p>I share deep dives into DevSecOps, SOC design, and experimental prototypes on Medium.</p>
-            <a href="https://medium.com/@MrHDK" target="_blank" class="btn primary-btn">Read&nbsp;the&nbsp;Field&nbsp;Notes</a>
+            <p>Field notes from SOC trenches, DevSecOps experiments, and embedded adventures.</p>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <span class="blog-tag">DevSecOps</span>
+                    <h3>Shipping Fast Without Leaking Secrets</h3>
+                    <p>How ArgoCD, Terraform, and Snyk come together to keep pipelines joyful yet uncompromising.</p>
+                    <a href="https://medium.com/@MrHDK" target="_blank" class="blog-link">Read on Medium <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </article>
+                <article class="blog-card">
+                    <span class="blog-tag">SOC Lab</span>
+                    <h3>Snort, Cowrie &amp; Splunk Dashboards in Harmony</h3>
+                    <p>Blueprinting a home SOC lab with enriched telemetry, honeypots, and AI-assisted detections.</p>
+                    <a href="https://medium.com/@MrHDK" target="_blank" class="blog-link">Explore the build <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </article>
+                <article class="blog-card">
+                    <span class="blog-tag">Embedded</span>
+                    <h3>IoT Security Patterns for STM32 Missions</h3>
+                    <p>Secure provisioning, MQTT hardening, and vibe coding dashboards for smart irrigation systems.</p>
+                    <a href="https://medium.com/@MrHDK" target="_blank" class="blog-link">Dive into the playbook <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </article>
+            </div>
         </section>
 
         <!-- Contact section -->
         <section id="contact" class="section">
             <h2>Get&nbsp;In&nbsp;Touch</h2>
-            <p>If you're building secure, observable platforms or crafting immersive experiences, let's collaborate.</p>
-            <ul class="contact-list">
-                <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/youssefhaddouk" target="_blank">linkedin.com/in/youssefhaddouk</a></li>
-                <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Mr-HDK" target="_blank">github.com/Mr-HDK</a></li>
-                <li><i class="fa-brands fa-medium"></i> <a href="https://medium.com/@MrHDK" target="_blank">medium.com/@MrHDK</a></li>
-            </ul>
-            <a href="https://linkedin.com/in/youssefhaddouk/" target="_blank" class="btn primary-btn">Request&nbsp;Collaboration</a>
+            <div class="contact-grid">
+                <article class="contact-card">
+                    <h3><i class="fa-solid fa-radar"></i> Mission Control</h3>
+                    <p>Ready for a SOC uplift, DevSecOps audit, or IoT security sprint? Let’s align our radars.</p>
+                    <a href="https://linkedin.com/in/youssefhaddouk" target="_blank" class="contact-link"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/youssefhaddouk</a>
+                </article>
+                <article class="contact-card">
+                    <h3><i class="fa-solid fa-code-branch"></i> Lab Collaborations</h3>
+                    <p>Explore GitHub experiments, vibe coding prototypes, and automation starter kits.</p>
+                    <a href="https://github.com/Mr-HDK" target="_blank" class="contact-link"><i class="fa-brands fa-github"></i> github.com/Mr-HDK</a>
+                </article>
+                <article class="contact-card">
+                    <h3><i class="fa-solid fa-feather"></i> Field Notes</h3>
+                    <p>Catch write-ups on threat hunting, QA coaching, and embedded artistry.</p>
+                    <a href="https://medium.com/@MrHDK" target="_blank" class="contact-link"><i class="fa-brands fa-medium"></i> medium.com/@MrHDK</a>
+                </article>
+            </div>
+            <a href="https://linkedin.com/in/youssefhaddouk" target="_blank" class="btn primary-btn contact-cta"><i class="fa-solid fa-paper-plane"></i> Launch&nbsp;a&nbsp;Project&nbsp;Brief</a>
         </section>
     </main>
 

@@ -92,28 +92,28 @@ function initNebula() {
       id: 'cyber',
       label: 'Cyber Defense Nebula',
       title: 'Cyber Defense Nebula',
-      tagline: 'Orchestrating blue & red team disciplines to harden infrastructure and respond decisively.',
-      languages: ['Python', 'Bash', 'PowerShell', 'SQL'],
-      tools: ['Burp Suite', 'Metasploit', 'Nmap', 'Nessus', 'Hydra', 'John the Ripper', 'SQLmap', 'NoSQLmap', 'Acunetix', 'Nikto', 'Aircrack-ng', 'Wazuh', 'Splunk', 'Snort', 'OpenVAS', 'MITRE ATT&CK', 'Autopsy', 'Volatility'],
-      focus: ['Incident Response', 'Threat Hunting', 'Digital Forensics', 'Purple Teaming'],
+      tagline: 'Orchestrating blue, red, and hardware security disciplines for resilient infrastructure.',
+      languages: ['Python', 'Bash', 'PowerShell', 'SQL', 'Lua'],
+      tools: ['Burp Suite', 'Metasploit', 'Nmap', 'Nessus', 'Hydra', 'John the Ripper', 'SQLmap', 'NoSQLmap', 'Acunetix', 'Nikto', 'Aircrack-ng', 'Wazuh', 'Splunk', 'Snort', 'OpenVAS', 'MITRE ATT&CK', 'Autopsy', 'Volatility', 'Hardware Forensics Kits'],
+      focus: ['Incident Response', 'Threat Hunting', 'Digital Forensics', 'Purple Teaming', 'Hardware Security'],
       orbits: [
         { radius: 220, items: ['SOC Playbooks', 'Risk Analysis', 'Policy Enforcement', 'Asset Inventory'] },
         { radius: 160, items: ['Pentesting', 'SIEM Dashboards', 'Attack Simulation', 'Forensic Imaging'] },
-        { radius: 100, items: ['Zero Trust', 'CTF Mastery', 'Security Awareness'] }
+        { radius: 100, items: ['Zero Trust', 'CTF Mastery', 'Security Awareness', 'Badge Cloning Labs'] }
       ]
     },
     {
       id: 'devsecops',
       label: 'DevSecOps Orbit',
       title: 'DevSecOps Orbit',
-      tagline: 'Automating guardrails across code, pipelines, and cloud infrastructure for frictionless delivery.',
+      tagline: 'Automating guardrails across code, pipelines, cloud, and full-stack observability.',
       languages: ['Python', 'Go', 'YAML', 'Terraform', 'Shell'],
-      tools: ['Docker', 'Kubernetes', 'Azure', 'AWS', 'Ansible', 'Vagrant', 'Jenkins', 'Git', 'SonarQube', 'Grafana', 'ArgoCD', 'Snyk'],
-      focus: ['Infrastructure as Code', 'Continuous Delivery', 'Observability', 'Security Automation'],
+      tools: ['Docker', 'Kubernetes', 'Azure', 'AWS', 'Ansible', 'Vagrant', 'Jenkins', 'Git', 'SonarQube', 'Grafana', 'ArgoCD', 'Snyk', 'Jira'],
+      focus: ['Infrastructure as Code', 'Continuous Delivery', 'Observability', 'Security Automation', 'Platform SRE'],
       orbits: [
         { radius: 220, items: ['AKS', 'Terraform Modules', 'Azure DevOps', 'Pipeline Governance'] },
         { radius: 160, items: ['Container Hardening', 'Policy as Code', 'GitOps', 'Service Mesh'] },
-        { radius: 100, items: ['Dashboards', 'Alerting', 'Chaos Drills'] }
+        { radius: 100, items: ['Dashboards', 'Alerting', 'Chaos Drills', 'Cost Guardrails'] }
       ]
     },
     {
@@ -121,13 +121,13 @@ function initNebula() {
       label: 'Quality Engineering Lab',
       title: 'Quality Engineering Lab',
       tagline: 'Building reliable automation ecosystems that elevate coverage, speed, and developer confidence.',
-      languages: ['Python', 'TypeScript', 'Java', 'C#', 'C'],
-      tools: ['Cypress', 'Selenium', 'JMeter', 'BlazeMeter', 'Robot Framework', 'Ceedling', 'GCOV', 'Postman', 'SOAP UI', 'Azure DevOps', 'Snyk'],
-      focus: ['TDD & BDD', 'Performance Testing', 'Coverage Analytics', 'QA Coaching'],
+      languages: ['Python', 'TypeScript', 'Java', 'C#', 'C', 'Groovy'],
+      tools: ['Cypress', 'Selenium', 'JMeter', 'BlazeMeter', 'Robot Framework', 'Ceedling', 'GCOV', 'Postman', 'SOAP UI', 'Azure DevOps', 'Snyk', 'TestRail'],
+      focus: ['TDD & BDD', 'Performance Testing', 'Coverage Analytics', 'QA Coaching', 'Shift-Left Security'],
       orbits: [
         { radius: 220, items: ['Test Strategy', 'Shift-Left', 'Release Quality Gates', 'Mentoring'] },
         { radius: 160, items: ['CI Integration', 'Synthetic Monitoring', 'Security Scans', 'Documentation'] },
-        { radius: 100, items: ['Workshops', 'Edge Cases', 'Memory Profiling'] }
+        { radius: 100, items: ['Workshops', 'Edge Cases', 'Memory Profiling', 'Scripting Accelerators'] }
       ]
     },
     {
@@ -136,12 +136,12 @@ function initNebula() {
       title: 'Embedded & Experience Forge',
       tagline: 'Designing interactive systems from STM32 firmware to Angular interfaces and Android visualisations.',
       languages: ['C', 'C++', 'Java', 'Kotlin', 'JavaScript', 'TypeScript', 'PHP', 'SQL'],
-      tools: ['STM32', 'Android Studio', 'Firebase', 'Angular', 'Node.js', 'Express.js', 'Bootstrap', 'MongoDB', 'MySQL'],
-      focus: ['Real-time Systems', 'UI Engineering', 'IoT Telemetry', 'Full-stack Delivery'],
+      tools: ['STM32', 'ESP32', 'Arduino', 'MQTT', 'Android Studio', 'Firebase', 'Angular', 'Node.js', 'Express.js', 'Bootstrap', 'MongoDB', 'MySQL', 'Grafcet', 'VHDL'],
+      focus: ['Real-time Systems', 'UI Engineering', 'IoT Telemetry', 'Full-stack Delivery', 'IoT Security'],
       orbits: [
         { radius: 220, items: ['STM32 Optimisation', 'Sensor Networks', 'Mobile UX', 'Realtime Alerts'] },
         { radius: 160, items: ['API Design', 'Edge Computing', 'Responsive Web', 'Data Sync'] },
-        { radius: 100, items: ['Prototyping', 'Design Systems', 'User Empathy'] }
+        { radius: 100, items: ['Prototyping', 'Design Systems', 'User Empathy', 'Hardware Threat Modelling'] }
       ]
     },
     {
@@ -150,12 +150,26 @@ function initNebula() {
       title: 'AI & Research Constellation',
       tagline: 'Experimenting with machine intelligence to augment security analytics and operational foresight.',
       languages: ['Python', 'SQL'],
-      tools: ['PyTorch', 'NVIDIA SDKs', 'Pandas', 'Scikit-learn', 'Splunk SOAR'],
-      focus: ['Threat Intelligence', 'Predictive Analytics', 'NLP Applications', 'Data Storytelling'],
+      tools: ['PyTorch', 'NVIDIA SDKs', 'Pandas', 'Scikit-learn', 'Splunk SOAR', 'OpenWebUI', 'LLaMA Adapters'],
+      focus: ['Threat Intelligence', 'Predictive Analytics', 'NLP Applications', 'Data Storytelling', 'RAG Engineering'],
       orbits: [
         { radius: 220, items: ['Transformer Apps', 'ML Pipelines', 'Data Labelling', 'Model Ops'] },
         { radius: 160, items: ['Graph Insights', 'Feature Engineering', 'Notebook Automation', 'Anomaly Scoring'] },
-        { radius: 100, items: ['Ethical AI', 'Experiment Tracking', 'Knowledge Sharing'] }
+        { radius: 100, items: ['Ethical AI', 'Experiment Tracking', 'Knowledge Sharing', 'Prompt Libraries'] }
+      ]
+    },
+    {
+      id: 'fullstack',
+      label: 'Full-Stack Vibe Lab',
+      title: 'Full-Stack Vibe Lab',
+      tagline: 'Pairing vibe coding energy with secure, joyful web experiences from sensor to screen.',
+      languages: ['TypeScript', 'JavaScript', 'PHP', 'Python', 'SQL'],
+      tools: ['Angular', 'Node.js', 'Express.js', 'Bootstrap', 'MongoDB', 'MySQL', 'Firebase', 'WordPress', 'Cypress', 'Postman'],
+      focus: ['Responsive UX', 'API Design', 'Vibe Coding Sessions', 'Performance Tuning', 'Secure SDLC'],
+      orbits: [
+        { radius: 220, items: ['Component Systems', 'Design Tokens', 'SPA Architecture', 'SEO Optimisation'] },
+        { radius: 160, items: ['REST APIs', 'Realtime Updates', 'Cloud Functions', 'Content Strategy'] },
+        { radius: 100, items: ['Accessibility', 'DX Tooling', 'Pair Programming', 'Storytelling'] }
       ]
     }
   ];
