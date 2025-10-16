@@ -3,46 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mr-hdk's Website</title>
+    <title>Mr&nbsp;HDK&nbsp;| Cybersecurity, AI &amp; DevSecOps</title>
+    <!-- Modern Google font for a clean look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pQeb5jAkFrXdYpfr6qytn+7vfVbNvUrP1hdE+e2PFMqPZe8VdZVSf0y99aHJH98nnY1JX1LX0kC73BMAzEhegQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to mr-hdk's Website</h1>
-        <nav>
-            <a href="#tools">Tools</a>
-            <a href="#blogs">Blogs</a>
-            <a href="#repositories">Repositories</a>
-            <a href="#resume">Resume</a>
-        </nav>
+    <!-- Theme toggle button -->
+    <button id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+
+    <!-- Hero section -->
+    <header id="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="accent">Mr&nbsp;HDK</span></h1>
+            <p class="tagline">Cybersecurity expert &amp; DevSecOps enthusiast<br>AI &amp; full‑stack developer</p>
+            <a href="#about" class="btn primary-btn">Learn&nbsp;More</a>
+        </div>
     </header>
+
+    <!-- Fixed navigation bar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content sections -->
     <main>
-        <section id="tools">
+        <!-- About section -->
+        <section id="about" class="section">
+            <h2>About&nbsp;Me</h2>
+            <p>
+                Passionate about securing systems and demystifying complex technologies,
+                I bring several years of experience in&nbsp;<strong>cybersecurity</strong> and
+                <strong>DevSecOps</strong>. From developing secure cloud infrastructures
+                to integrating AI into threat detection, I enjoy building solutions that
+                are both robust and innovative. When I'm not hardening systems, you'll
+                find me exploring machine learning algorithms or contributing to open‑source projects.
+            </p>
+        </section>
+
+        <!-- Skills section -->
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-title"><i class="fa-solid fa-shield-halved"></i> Cybersecurity</div>
+                    <div class="progress"><div class="progress-bar" style="width:90%" data-width="90"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-title"><i class="fa-solid fa-robot"></i> Artificial&nbsp;Intelligence</div>
+                    <div class="progress"><div class="progress-bar" style="width:75%" data-width="75"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-title"><i class="fa-solid fa-lock"></i> DevSecOps</div>
+                    <div class="progress"><div class="progress-bar" style="width:85%" data-width="85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-title"><i class="fa-solid fa-code"></i> Development</div>
+                    <div class="progress"><div class="progress-bar" style="width:80%" data-width="80"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Secure Network Monitor</h3>
+                    <p>A real‑time network traffic analyzer built with Python and Rust. Implements anomaly detection using machine learning to flag unusual patterns.</p>
+                    <a href="https://github.com/mr-hdk/project1" target="_blank" class="btn secondary-btn">View on GitHub</a>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-cloud"></i></div>
+                    <h3>Cloud&nbsp;Guard&nbsp;CI</h3>
+                    <p>Automated CI/CD pipeline template that integrates static analysis, container scanning and infrastructure as code validation.</p>
+                    <a href="https://github.com/mr-hdk/project2" target="_blank" class="btn secondary-btn">View on GitHub</a>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Threat&nbsp;Intel&nbsp;AI</h3>
+                    <p>An AI‑powered threat intelligence dashboard that correlates feeds from multiple sources and recommends mitigation steps.</p>
+                    <a href="#" class="btn secondary-btn disabled" aria-disabled="true">Coming Soon</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools section -->
+        <section id="tools" class="section">
             <h2>Tools</h2>
-            <ul>
-                <li><a href="./tools/base64.html">Base64 Converter</a></li>
-                <!-- Add other tools here -->
+            <p>Here are some handy utilities I've built for everyday tasks:</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                    <h3>Base64 Converter</h3>
+                    <p>Encode or decode text to and from Base64.</p>
+                    <a href="tools/base64.html" class="btn secondary-btn">Use Tool</a>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-fingerprint"></i></div>
+                    <h3>Hash Generator</h3>
+                    <p>Create SHA‑256 hashes of strings for checksums or password hashing.</p>
+                    <a href="tools/hash.html" class="btn secondary-btn">Use Tool</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog section -->
+        <section id="blog" class="section">
+            <h2>Blog</h2>
+            <p>Stay tuned for articles covering cybersecurity best practices,
+               AI breakthroughs and DevSecOps tips. I'm working on
+               insightful posts that will be published here soon.</p>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact" class="section">
+            <h2>Get&nbsp;In&nbsp;Touch</h2>
+            <p>If you'd like to collaborate or just say hello,
+               feel free to reach out through the channels below.</p>
+            <ul class="contact-list">
+                <li><i class="fa-solid fa-envelope"></i> <a href="mailto:example@domain.com">example@domain.com</a></li>
+                <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Mr-HDK" target="_blank">GitHub</a></li>
+                <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a></li>
             </ul>
-        </section>
-        <section id="blogs">
-            <h2>Blogs</h2>
-            <p><a href="./blogs/blog1.html">My First Blog Post</a></p>
-            <!-- Add more blog links -->
-        </section>
-        <section id="repositories">
-            <h2>Repositories</h2>
-            <ul>
-                <li><a href="https://github.com/mr-hdk/project1">Project 1</a></li>
-                <li><a href="https://github.com/mr-hdk/project2">Project 2</a></li>
-            </ul>
-        </section>
-        <section id="resume">
-            <h2>Resume</h2>
-            <a href="./resume/mr-hdk_Resume.pdf" download>Download My Resume</a>
+            <a href="resume/mr-hdk_Resume.pdf" class="btn primary-btn" download>Download&nbsp;Resume</a>
         </section>
     </main>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 mr-hdk</p>
+        <p>&copy;&nbsp;<span id="year"></span>&nbsp;Mr&nbsp;HDK. Built with <span class="heart">&#10084;&#65039;</span></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

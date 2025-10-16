@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Generator · Mr&nbsp;HDK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pQeb5jAkFrXdYpfr6qytn+7vfVbNvUrP1hdE+e2PFMqPZe8VdZVSf0y99aHJH98nnY1JX1LX0kC73BMAzEhegQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <button id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    <header id="hero" style="height: 40vh; background: linear-gradient(135deg, var(--primary), var(--primary-dark));">
+        <div class="hero-content">
+            <h1>SHA‑256 Hash Generator</h1>
+            <p class="tagline">Generate cryptographic hashes effortlessly</p>
+        </div>
+    </header>
+    <nav id="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#hasher">Hasher</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="hasher" class="section">
+            <h2>Generate&nbsp;Hash</h2>
+            <div class="cards-grid" style="grid-template-columns: 1fr;">
+                <div class="card">
+                    <label for="hashInput" style="font-weight:600;">Input Text</label>
+                    <textarea id="hashInput" placeholder="Enter text to hash..."></textarea>
+                    <button class="btn primary-btn" onclick="generateHash()">Generate SHA‑256</button>
+                    <label for="hashOutput" style="font-weight:600;">Hash Output</label>
+                    <textarea id="hashOutput" readonly placeholder="SHA‑256 hash will appear here..."></textarea>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;&nbsp;<span id="year"></span>&nbsp;Mr&nbsp;HDK</p>
+    </footer>
+    <script src="../script.js"></script>
+    <script>
+        // Generate a SHA‑256 hash using the SubtleCrypto API
+        async function generateHash() {
+            const input = document.getElementById('hashInput').value;
+            const encoder = new TextEncoder();
+            const data = encoder.encode(input);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            document.getElementById('hashOutput').value = hashHex;
+        }
+    </script>
+</body>
+</html>
