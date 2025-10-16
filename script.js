@@ -134,8 +134,8 @@ function initNebula() {
       id: 'quality',
       label: 'Quality Engineering Lab',
       title: 'Quality Engineering Lab',
-      tagline: 'Building automation ecosystems that elevate coverage, performance, and developer confidence.',
-      languages: ['Python', 'TypeScript', 'Java', 'C#', 'C'],
+      tagline: 'Building reliable automation ecosystems that elevate coverage, speed, and developer confidence.',
+      languages: ['Python', 'TypeScript', 'Java', 'C#', 'C', 'Groovy'],
       tools: ['Cypress', 'Selenium', 'JMeter', 'BlazeMeter', 'Robot Framework', 'Ceedling', 'GCOV', 'Postman', 'SOAP UI', 'Azure DevOps', 'Snyk', 'TestRail'],
       focus: ['TDD & BDD', 'Performance Testing', 'Coverage Analytics', 'QA Coaching', 'Shift-Left Security'],
       orbits: [
@@ -178,8 +178,8 @@ function initNebula() {
       title: 'Full-Stack Vibe Lab',
       tagline: 'Pairing vibe coding energy with secure, joyful experiences from CMS to cloud-native APIs.',
       languages: ['HTML', 'CSS', 'TypeScript', 'JavaScript', 'PHP', 'Python', 'SQL'],
-      tools: ['Angular', 'Node.js', 'Express.js', 'Firebase', 'MongoDB', 'MySQL', 'PostgreSQL', 'WordPress', 'Headless CMS', 'Flutter', 'Android Studio', 'Cypress', 'Postman'],
-      focus: ['Responsive UX', 'API Design', 'CMS Engineering', 'Realtime Dashboards', 'Secure SDLC'],
+      tools: ['Angular', 'Node.js', 'Express.js', 'Firebase', 'MongoDB', 'MySQL', 'PostgreSQL', 'WordPress', 'CMS', 'Flutter', 'Android Studio', 'Cypress', 'Postman'],
+      focus: ['Responsive UX', 'API Design', 'Vibe Coding Sessions', 'Realtime Dashboards', 'Secure SDLC'],
       orbits: [
         { radius: 220, items: ['Component Systems', 'Design Tokens', 'SPA Architecture', 'SEO Optimisation'] },
         { radius: 160, items: ['REST APIs', 'Realtime Updates', 'Cloud Functions', 'Content Strategy'] },
