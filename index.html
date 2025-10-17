@@ -11,12 +11,18 @@
 </head>
 <body data-language="en">
     <button id="theme-toggle" aria-label="Toggle theme">
-        <span class="toggle-icon"><i class="fa-solid fa-moon"></i></span>
+        <span class="toggle-icon" aria-hidden="true">
+            <i class="fa-solid fa-sun sun-icon"></i>
+            <i class="fa-solid fa-moon moon-icon"></i>
+        </span>
         <span class="toggle-label" data-i18n="controls.theme">Shift&nbsp;Mode</span>
         <span class="toggle-glow"></span>
     </button>
     <button id="language-toggle" aria-label="Basculer la langue">
-        <span class="toggle-icon"><i class="fa-solid fa-language"></i></span>
+        <span class="toggle-icon flag-icons" aria-hidden="true">
+            <span class="flag flag-en" role="img" aria-label="English">🇬🇧</span>
+            <span class="flag flag-fr" role="img" aria-label="Français">🇫🇷</span>
+        </span>
         <span class="toggle-label" id="language-toggle-label">FR</span>
         <span class="toggle-glow"></span>
     </button>
@@ -50,7 +56,7 @@
                     <span data-i18n="hero.role3">Hardware &amp; IoT Hardening</span>
                     <span data-i18n="hero.role4">Vibe&nbsp;Coding&nbsp;Full&nbsp;Stack</span>
                 </div>
-                <p class="hero-bio" data-i18n="hero.bio">I combine SOC leadership, audit programmes, and hardware-aware engineering to secure platforms end-to-end. From Azure pipelines to STM32 labs, every mission blends scripting, resilience, and guided coaching.</p>
+                <p class="hero-bio" data-i18n="hero.bio">I combine SOC leadership, cybersecurity consulting clinics, and hardware-aware engineering to secure platforms end-to-end. From Azure pipelines to STM32 labs, every mission blends audit programmes, scripting resilience, and guided coaching.</p>
                 <div class="hero-actions">
                     <a href="#mission" class="btn primary-btn scroll-btn">
                         <span data-i18n="hero.ctaPrimary">Enter&nbsp;Mission&nbsp;Deck</span>
@@ -120,7 +126,7 @@
             <h2 data-i18n="experience.title">Experience&nbsp;&amp;&nbsp;Teaching</h2>
             <div class="timeline">
                 <article class="timeline-item">
-                    <div class="timeline-marker"><span data-i18n="experience.oss.dates">Feb&nbsp;2025&nbsp;–&nbsp;Present</span></div>
+                    <div class="timeline-marker"><span data-i18n="experience.oss.dates">February&nbsp;2025&nbsp;–&nbsp;Present</span></div>
                     <div class="timeline-content">
                         <h3 data-i18n="experience.oss.title">Sahara and Sahel Observatory (OSS)</h3>
                         <h4 data-i18n="experience.oss.role">Information Systems Security Officer</h4>
@@ -132,7 +138,7 @@
                     </div>
                 </article>
                 <article class="timeline-item">
-                    <div class="timeline-marker"><span data-i18n="experience.isi.dates">Feb&nbsp;2024&nbsp;–&nbsp;Aug&nbsp;2024</span></div>
+                    <div class="timeline-marker"><span data-i18n="experience.isi.dates">February&nbsp;2024&nbsp;–&nbsp;August&nbsp;2024</span></div>
                     <div class="timeline-content">
                         <h3 data-i18n="experience.isi.title">Higher Institute of Computer Science (ISI)</h3>
                         <h4 data-i18n="experience.isi.role">Adjunct Lecturer · Test Automation</h4>
@@ -144,7 +150,7 @@
                     </div>
                 </article>
                 <article class="timeline-item">
-                    <div class="timeline-marker"><span data-i18n="experience.datahorizon.dates">Feb&nbsp;2024&nbsp;–&nbsp;Feb&nbsp;2025</span></div>
+                    <div class="timeline-marker"><span data-i18n="experience.datahorizon.dates">February&nbsp;2024&nbsp;–&nbsp;February&nbsp;2025</span></div>
                     <div class="timeline-content">
                         <h3 data-i18n="experience.datahorizon.title">DATAHORIZON</h3>
                         <h4 data-i18n="experience.datahorizon.role">QA Automation Engineer</h4>
@@ -156,7 +162,7 @@
                     </div>
                 </article>
                 <article class="timeline-item">
-                    <div class="timeline-marker"><span data-i18n="experience.aptyx.dates">Feb&nbsp;2022&nbsp;–&nbsp;Jul&nbsp;2022</span></div>
+                    <div class="timeline-marker"><span data-i18n="experience.aptyx.dates">February&nbsp;2022&nbsp;–&nbsp;July&nbsp;2022</span></div>
                     <div class="timeline-content">
                         <h3 data-i18n="experience.aptyx.title">APTYX</h3>
                         <h4 data-i18n="experience.aptyx.role">Embedded &amp; Mobile Engineer</h4>
@@ -168,7 +174,7 @@
                     </div>
                 </article>
                 <article class="timeline-item">
-                    <div class="timeline-marker"><span data-i18n="experience.freelance.dates">Jan&nbsp;2020&nbsp;–&nbsp;Sep&nbsp;2023</span></div>
+                    <div class="timeline-marker"><span data-i18n="experience.freelance.dates">January&nbsp;2020&nbsp;–&nbsp;September&nbsp;2023</span></div>
                     <div class="timeline-content">
                         <h3 data-i18n="experience.freelance.title">Freelance · Fiverr</h3>
                         <h4 data-i18n="experience.freelance.role">Web Developer &amp; Security Consultant</h4>
@@ -284,43 +290,64 @@
             <p data-i18n="tools.body">Hands-on utilities I crafted to support day-to-day analysis, auditing, and experimentation.</p>
             <div class="labs-grid">
                 <article class="lab-card">
-                    <div class="icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1580894906472-2f994fa95b9c?auto=format&fit=crop&w=480&q=80" alt="Data streams abstract visual" loading="lazy">
+                        <span class="lab-icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></span>
+                    </div>
                     <h3 data-i18n="tools.base64.title">Base64 Converter</h3>
                     <p data-i18n="tools.base64.body">Encode or decode text to and from Base64 for quick payload inspections.</p>
                     <a href="tools/base64.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
                 </article>
                 <article class="lab-card">
-                    <div class="icon"><i class="fa-solid fa-fingerprint"></i></div>
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=480&q=80" alt="Fingerprint scanner hologram" loading="lazy">
+                        <span class="lab-icon"><i class="fa-solid fa-fingerprint"></i></span>
+                    </div>
                     <h3 data-i18n="tools.hash.title">Hash Generator</h3>
                     <p data-i18n="tools.hash.body">Create SHA‑256 hashes of strings for checksums or credential testing.</p>
                     <a href="tools/hash.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
                 </article>
                 <article class="lab-card">
-                    <div class="icon"><i class="fa-solid fa-id-card-clip"></i></div>
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1580894896868-65b1d592cd96?auto=format&fit=crop&w=480&q=80" alt="Digital identity illustration" loading="lazy">
+                        <span class="lab-icon"><i class="fa-solid fa-id-card-clip"></i></span>
+                    </div>
                     <h3 data-i18n="tools.jwt.title">JWT Inspector</h3>
                     <p data-i18n="tools.jwt.body">Decode JSON Web Tokens safely to review headers, claims, and signing context.</p>
                     <a href="tools/jwt.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
                 </article>
                 <article class="lab-card">
-                    <div class="icon"><i class="fa-solid fa-waveform-lines"></i></div>
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=480&q=80" alt="Colorful server lights" loading="lazy">
+                        <span class="lab-icon"><i class="fa-solid fa-waveform-lines"></i></span>
+                    </div>
                     <h3 data-i18n="tools.uuid.title">UUID Forge</h3>
                     <p data-i18n="tools.uuid.body">Generate traceable batches of UUIDv4 identifiers for lab systems and test data.</p>
                     <a href="tools/uuid.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
                 </article>
                 <article class="lab-card">
-                    <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=480&q=80" alt="Cybersecurity shield hologram" loading="lazy">
+                        <span class="lab-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                    </div>
                     <h3 data-i18n="tools.password.title">Password Pulse</h3>
                     <p data-i18n="tools.password.body">Measure password entropy, hints, and remediation ideas instantly.</p>
                     <a href="tools/password.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
                 </article>
                 <article class="lab-card">
-                    <div class="icon"><i class="fa-solid fa-route"></i></div>
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1580894906409-984ebc9b7df2?auto=format&fit=crop&w=480&q=80" alt="Network topology blueprint" loading="lazy">
+                        <span class="lab-icon"><i class="fa-solid fa-route"></i></span>
+                    </div>
                     <h3 data-i18n="tools.cidr.title">CIDR Navigator</h3>
                     <p data-i18n="tools.cidr.body">Map network ranges, host capacity, and broadcast zones from CIDR blocks.</p>
                     <a href="tools/cidr.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
                 </article>
                 <article class="lab-card">
-                    <div class="icon"><i class="fa-solid fa-link"></i></div>
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=480&q=80" alt="URL connection visualization" loading="lazy">
+                        <span class="lab-icon"><i class="fa-solid fa-link"></i></span>
+                    </div>
                     <h3 data-i18n="tools.url.title">URL&nbsp;Encoder</h3>
                     <p data-i18n="tools.url.body">Encode or decode URLs to debug webhook calls and HTTP payloads.</p>
                     <a href="tools/urlencode.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
@@ -410,17 +437,17 @@
                 <article class="contact-card">
                     <h3><i class="fa-solid fa-link"></i> <span data-i18n="contact.card2.title">Connect &amp; Collaborate</span></h3>
                     <p data-i18n="contact.card2.body">Sync on SOC initiatives, audit programmes, DevSecOps journeys, or QA accelerators.</p>
-                    <a href="https://linkedin.com/in/youssefhaddouk" target="_blank" class="contact-link" data-i18n="contact.card2.cta"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/youssefhaddouk</a>
+                    <a href="https://linkedin.com/in/youssefhaddouk" target="_blank" class="contact-link" data-i18n="contact.card2.cta"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
                 </article>
                 <article class="contact-card">
                     <h3><i class="fa-solid fa-code"></i> <span data-i18n="contact.card3.title">Explore the Labs</span></h3>
                     <p data-i18n="contact.card3.body">Dive into GitHub experiments, vibe coding prototypes, and tooling kits for daily ops.</p>
-                    <a href="https://github.com/Mr-HDK" target="_blank" class="contact-link" data-i18n="contact.card3.cta"><i class="fa-brands fa-github"></i> github.com/Mr-HDK</a>
+                    <a href="https://github.com/Mr-HDK" target="_blank" class="contact-link" data-i18n="contact.card3.cta"><i class="fa-brands fa-github"></i> GitHub</a>
                 </article>
                 <article class="contact-card">
                     <h3><i class="fa-solid fa-book-open"></i> <span data-i18n="contact.card4.title">Read the Field Notes</span></h3>
                     <p data-i18n="contact.card4.body">Follow reverse engineering logs, threat write-ups, and teaching moments from the field.</p>
-                    <a href="https://medium.com/@MrHDK" target="_blank" class="contact-link" data-i18n="contact.card4.cta"><i class="fa-brands fa-medium"></i> medium.com/@MrHDK</a>
+                    <a href="https://medium.com/@MrHDK" target="_blank" class="contact-link" data-i18n="contact.card4.cta"><i class="fa-brands fa-medium"></i> Medium</a>
                 </article>
             </div>
             <a href="https://linkedin.com/in/youssefhaddouk" target="_blank" class="btn primary-btn contact-cta" data-i18n="contact.cta"><i class="fa-solid fa-paper-plane"></i> Open&nbsp;a&nbsp;LinkedIn&nbsp;DM</a>

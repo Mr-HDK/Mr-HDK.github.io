@@ -254,7 +254,7 @@ const translations = {
     'hero.role2': 'Audit &amp; Conseil cybersécurité',
     'hero.role3': 'Durcissement matériel &amp; IoT',
     'hero.role4': 'Full&nbsp;Stack&nbsp;Vibe&nbsp;Coding',
-    'hero.bio': 'Je combine pilotage SOC, programmes d’audit et ingénierie orientée hardware pour sécuriser les plateformes de bout en bout. Des pipelines Azure aux labs STM32, chaque mission conjugue scripting, résilience et accompagnement.',
+    'hero.bio': 'Je combine pilotage SOC, cliniques de conseil cybersécurité et ingénierie orientée hardware pour sécuriser les plateformes de bout en bout. Des pipelines Azure aux labs STM32, chaque mission conjugue programmes d’audit, scripting, résilience et accompagnement.',
     'hero.ctaPrimary': 'Entrer&nbsp;dans&nbsp;la&nbsp;mission',
     'hero.ctaSecondary': 'Voir&nbsp;les&nbsp;labs&nbsp;code',
     'hero.highlight1': 'Top 0,1 % · TryHackMe',
@@ -282,31 +282,31 @@ const translations = {
     'mission.pill5': 'Sécurité hardware',
     'mission.pill6': 'Audits de sécurité',
     'experience.title': 'Expérience &amp;&nbsp;enseignement',
-    'experience.oss.dates': 'Fév.&nbsp;2025&nbsp;–&nbsp;Présent',
+    'experience.oss.dates': 'Février&nbsp;2025&nbsp;–&nbsp;Présent',
     'experience.oss.title': 'Observatoire du Sahara et du Sahel (OSS)',
     'experience.oss.role': 'Responsable sécurité des SI',
     'experience.oss.point1': 'Durcissement de l’infrastructure, réponse à incident et forensique pour des environnements critiques.',
     'experience.oss.point2': 'Pentests, audits cyber et analyses de risques tout en pilotant les politiques et la gestion d’actifs.',
     'experience.oss.point3': 'Sensibilisation cybersécurité via des cliniques conseil pour dirigeants et équipes delivery.',
-    'experience.isi.dates': 'Fév.&nbsp;2024&nbsp;–&nbsp;Août&nbsp;2024',
+    'experience.isi.dates': 'Février&nbsp;2024&nbsp;–&nbsp;Août&nbsp;2024',
     'experience.isi.title': 'Institut Supérieur d’Informatique (ISI)',
     'experience.isi.role': 'Chargé de cours · Test automation',
     'experience.isi.point1': 'Enseignement de Ceedling, GCOV, Robot Framework et des pratiques TDD aux promotions d’ingénieurs.',
     'experience.isi.point2': 'Ateliers sur l’analyse de couverture, la détection de cas limites et la gestion des débordements mémoire.',
     'experience.isi.point3': 'Mentorat de projets QA avec stratégies d’automatisation prêtes pour l’industrie et scripts accélérateurs.',
-    'experience.datahorizon.dates': 'Fév.&nbsp;2024&nbsp;–&nbsp;Fév.&nbsp;2025',
+    'experience.datahorizon.dates': 'Février&nbsp;2024&nbsp;–&nbsp;Février&nbsp;2025',
     'experience.datahorizon.title': 'DATAHORIZON',
     'experience.datahorizon.role': 'Ingénieur QA automation',
     'experience.datahorizon.point1': 'Conception de frameworks Cypress, Selenium et JMeter intégrés aux pipelines Azure DevOps.',
     'experience.datahorizon.point2': 'Augmentation de la couverture via Snyk et Acunetix intégrés aux garde-fous SSDLC.',
     'experience.datahorizon.point3': 'Coaching QA, revues de code et playbooks de documentation à destination des équipes.',
-    'experience.aptyx.dates': 'Fév.&nbsp;2022&nbsp;–&nbsp;Juil.&nbsp;2022',
+    'experience.aptyx.dates': 'Février&nbsp;2022&nbsp;–&nbsp;Juillet&nbsp;2022',
     'experience.aptyx.title': 'APTYX',
     'experience.aptyx.role': 'Ingénieur embarqué &amp; mobile',
     'experience.aptyx.point1': 'Contrôleur d’irrigation temps réel sur STM32 avec visualisation Android.',
     'experience.aptyx.point2': 'Télémétrie via Firebase avec alertes en direct et sécurité matérielle.',
     'experience.aptyx.point3': 'Optimisation du code embarqué pour garantir performance et maintenabilité.',
-    'experience.freelance.dates': 'Janv.&nbsp;2020&nbsp;–&nbsp;Sep.&nbsp;2023',
+    'experience.freelance.dates': 'Janvier&nbsp;2020&nbsp;–&nbsp;Septembre&nbsp;2023',
     'experience.freelance.title': 'Freelance · Fiverr',
     'experience.freelance.role': 'Développeur web &amp; consultant sécurité',
     'experience.freelance.point1': 'Expériences web performantes avec CMS, accessibilité et UX soignée.',
@@ -405,13 +405,13 @@ const translations = {
     'contact.card1.cta': '<i class="fa-solid fa-calendar-check"></i> Planifier une session',
     'contact.card2.title': 'Connecter &amp; collaborer',
     'contact.card2.body': 'Alignement sur initiatives SOC, programmes d’audit, parcours DevSecOps ou accélérateurs QA.',
-    'contact.card2.cta': '<i class="fa-brands fa-linkedin"></i> linkedin.com/in/youssefhaddouk',
+    'contact.card2.cta': '<i class="fa-brands fa-linkedin"></i> LinkedIn',
     'contact.card3.title': 'Explorer les labs',
     'contact.card3.body': 'Découvrir les expériences GitHub, prototypes vibe coding et kits d’outils.',
-    'contact.card3.cta': '<i class="fa-brands fa-github"></i> github.com/Mr-HDK',
+    'contact.card3.cta': '<i class="fa-brands fa-github"></i> GitHub',
     'contact.card4.title': 'Lire les notes de terrain',
     'contact.card4.body': 'Suivre les journaux de reverse, les articles de veille et les retours pédagogiques.',
-    'contact.card4.cta': '<i class="fa-brands fa-medium"></i> medium.com/@MrHDK',
+    'contact.card4.cta': '<i class="fa-brands fa-medium"></i> Medium',
     'contact.cta': '<i class="fa-solid fa-paper-plane"></i> Envoyer un message LinkedIn',
     'footer.name': 'Mr&nbsp;HDK',
     'footer.built': 'Créé avec'
@@ -430,28 +430,27 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const toggleButton = document.getElementById('theme-toggle');
-  const toggleIcon = toggleButton ? toggleButton.querySelector('i') : null;
+  const sunIcon = toggleButton ? toggleButton.querySelector('.sun-icon') : null;
+  const moonIcon = toggleButton ? toggleButton.querySelector('.moon-icon') : null;
 
   const setThemeIcon = () => {
-    if (!toggleIcon) return;
-    if (document.body.classList.contains('dark')) {
-      toggleIcon.classList.remove('fa-moon');
-      toggleIcon.classList.add('fa-sun');
-    } else {
-      toggleIcon.classList.remove('fa-sun');
-      toggleIcon.classList.add('fa-moon');
-    }
+    if (!sunIcon || !moonIcon) return;
+    const isDark = document.body.classList.contains('dark');
+    sunIcon.setAttribute('aria-hidden', String(!isDark));
+    moonIcon.setAttribute('aria-hidden', String(isDark));
   };
 
   setThemeIcon();
 
   if (toggleButton) {
+    toggleButton.setAttribute('aria-pressed', String(document.body.classList.contains('dark')));
     toggleButton.addEventListener('click', () => {
       document.body.classList.toggle('dark');
       const newTheme = document.body.classList.contains('dark') ? 'dark' : 'light';
       localStorage.setItem('theme', newTheme);
       toggleButton.classList.toggle('rotate');
       setThemeIcon();
+      toggleButton.setAttribute('aria-pressed', String(newTheme === 'dark'));
     });
   }
 
@@ -488,6 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'aria-label',
         currentLanguage === 'en' ? 'Basculer vers le français' : 'Switch to English'
       );
+      languageToggle.setAttribute('aria-pressed', String(currentLanguage === 'fr'));
     }
   };
 
