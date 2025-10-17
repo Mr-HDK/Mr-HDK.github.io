@@ -1296,6 +1296,10 @@ footer {
     }
     .hero-pillars {
         grid-template-columns: 1fr;
+        padding-left: 2.5rem;
+    }
+    .timeline::before {
+        left: 0;
     }
 }
 
