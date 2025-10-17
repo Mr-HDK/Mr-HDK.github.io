@@ -1424,6 +1424,20 @@ footer {
     }
     .hero-pillars {
         grid-template-columns: 1fr;
+        padding-left: 2.5rem;
+    }
+    .timeline::before {
+        left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #theme-toggle,
+    #language-toggle {
+        right: 0.8rem;
+    }
+    #language-toggle {
+        top: 4rem;
     }
 }
 
