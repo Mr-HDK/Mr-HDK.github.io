@@ -409,12 +409,12 @@ body.dark #navbar {
 }
 
 .down-rocket .icon {
-    transform: rotate(135deg);
+    transform: rotate(0deg);
     transition: transform 0.4s ease;
 }
 
 .scroll-btn:hover .down-rocket .icon {
-    transform: rotate(135deg) translateY(4px);
+    transform: rotate(180deg) translateY(-2px);
 }
 
 .hero-highlights {
