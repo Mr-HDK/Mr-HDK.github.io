@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWT Inspector · Mr&nbsp;HDK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="tool-page">
+    <button id="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon" aria-hidden="true">
+            <svg class="icon sun-icon"><use href="../assets/icons.svg#icon-sun"></use></svg>
+            <svg class="icon moon-icon"><use href="../assets/icons.svg#icon-moon"></use></svg>
+        </span>
+        <span class="toggle-label">Shift&nbsp;Mode</span>
+        <span class="toggle-glow"></span>
+    </button>
+    <header id="hero" class="hero-mini">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-title-stack">
+                    <h1>JWT Inspector</h1>
+                    <p class="hero-subtitle">Decode JSON Web Tokens in a safe, offline viewer to audit claims and headers.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#jwt">Inspector</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="jwt" class="section">
+            <h2>Inspect&nbsp;Token</h2>
+            <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <article class="card">
+                    <h3>Paste&nbsp;JWT</h3>
+                    <textarea id="jwtInput" placeholder="eyJhbGciOi..."></textarea>
+                    <button class="btn primary-btn" onclick="decodeJWT()">Decode Token</button>
+                    <p class="badge">All decoding occurs locally in your browser.</p>
+                </article>
+                <article class="card">
+                    <h3>Header</h3>
+                    <pre id="jwtHeader">{}</pre>
+                </article>
+                <article class="card">
+                    <h3>Payload</h3>
+                    <pre id="jwtPayload">{}</pre>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;&nbsp;<span id="year"></span>&nbsp;Mr&nbsp;HDK</p>
+    </footer>
+    <script src="../script.js"></script>
+    <script>
+        function base64UrlDecode(segment) {
+            segment = segment.replace(/-/g, '+').replace(/_/g, '/');
+            const pad = segment.length % 4;
+            if (pad) {
+                segment += '='.repeat(4 - pad);
+            }
+            try {
+                return decodeURIComponent(Array.prototype.map.call(atob(segment), function(c) {
+                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                }).join(''));
+            } catch (err) {
+                throw new Error('Invalid base64 segment');
+            }
+        }
+
+        function decodeJWT() {
+            const token = (document.getElementById('jwtInput').value || '').trim();
+            const headerEl = document.getElementById('jwtHeader');
+            const payloadEl = document.getElementById('jwtPayload');
+
+            if (!token) {
+                headerEl.textContent = '{}';
+                payloadEl.textContent = '{}';
+                return;
+            }
+
+            const parts = token.split('.');
+            if (parts.length < 2) {
+                headerEl.textContent = 'Invalid token: expected header.payload';
+                payloadEl.textContent = '{}';
+                return;
+            }
+
+            try {
+                const header = JSON.parse(base64UrlDecode(parts[0]));
+                const payload = JSON.parse(base64UrlDecode(parts[1]));
+                headerEl.textContent = JSON.stringify(header, null, 2);
+                payloadEl.textContent = JSON.stringify(payload, null, 2);
+            } catch (err) {
+                headerEl.textContent = 'Unable to decode header/payload: ' + err.message;
+                payloadEl.textContent = '{}';
+            }
+        }
+    </script>
+</body>
+</html>
