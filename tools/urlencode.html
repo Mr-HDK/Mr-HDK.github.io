@@ -6,11 +6,13 @@
     <title>URL Encoder · Mr&nbsp;HDK</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pQeb5jAkFrXdYpfr6qytn+7vfVbNvUrP1hdE+e2PFMqPZe8VdZVSf0y99aHJH98nnY1JX1LX0kC73BMAzEhegQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="tool-page">
     <button id="theme-toggle" aria-label="Toggle theme">
-        <span class="toggle-icon"><i class="fa-solid fa-moon"></i></span>
+        <span class="toggle-icon" aria-hidden="true">
+            <svg class="icon sun-icon"><use href="../assets/icons.svg#icon-sun"></use></svg>
+            <svg class="icon moon-icon"><use href="../assets/icons.svg#icon-moon"></use></svg>
+        </span>
         <span class="toggle-label">Shift&nbsp;Mode</span>
         <span class="toggle-glow"></span>
     </button>
@@ -41,12 +43,12 @@
                 <article class="card">
                     <h3>Encoded</h3>
                     <textarea id="encodedOutput" readonly></textarea>
-                    <button class="btn secondary-btn" onclick="copyText('encodedOutput')"><i class="fa-solid fa-copy"></i> Copy Encoded</button>
+                    <button class="btn secondary-btn" onclick="copyText('encodedOutput')"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#icon-copy"></use></svg> Copy Encoded</button>
                 </article>
                 <article class="card">
                     <h3>Decoded</h3>
                     <textarea id="decodedOutput" readonly></textarea>
-                    <button class="btn secondary-btn" onclick="copyText('decodedOutput')"><i class="fa-solid fa-copy"></i> Copy Decoded</button>
+                    <button class="btn secondary-btn" onclick="copyText('decodedOutput')"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#icon-copy"></use></svg> Copy Decoded</button>
                 </article>
             </div>
         </section>

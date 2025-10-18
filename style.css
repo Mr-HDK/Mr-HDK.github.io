@@ -51,6 +51,14 @@ a {
     color: inherit;
 }
 
+svg.icon {
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: middle;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
 /* Utility toggles */
 #theme-toggle,
 #language-toggle {
@@ -121,14 +129,15 @@ body:not(.dark) #theme-toggle .sun-icon {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
-    font-size: 1.1rem;
 }
 
-#language-toggle .flag {
-    display: inline-flex;
-    filter: saturate(0.75);
+#language-toggle .flag-icon {
+    width: 1.55rem;
+    height: 1.1rem;
     opacity: 0.55;
     transform: scale(0.9);
+    filter: saturate(0.75);
+    border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
 }
 
@@ -271,7 +280,7 @@ body.dark #navbar {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 6rem 1.5rem 4rem;
+    padding: 5rem 1.5rem 4rem;
     background: radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.15), transparent 58%),
                 linear-gradient(120deg, var(--hero-start), var(--hero-end));
     color: #ffffff;
@@ -336,6 +345,7 @@ body.dark #navbar {
 #hero h1 .last-name {
     display: inline-flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 #hero h1 .last-name {
@@ -395,12 +405,12 @@ body.dark #navbar {
     justify-content: center;
 }
 
-.down-rocket i {
+.down-rocket .icon {
     transform: rotate(135deg);
     transition: transform 0.4s ease;
 }
 
-.scroll-btn:hover .down-rocket i {
+.scroll-btn:hover .down-rocket .icon {
     transform: rotate(135deg) translateY(4px);
 }
 
@@ -486,6 +496,13 @@ body.dark #navbar {
     backdrop-filter: blur(12px);
     box-shadow: 0 12px 30px rgba(2, 8, 30, 0.4);
     text-align: center;
+}
+
+.portrait-badges .icon,
+.hero-highlights .icon,
+.location .icon {
+    width: 1.1rem;
+    height: 1.1rem;
 }
 
 .hero-orbits {
@@ -680,6 +697,11 @@ body.tool-page .hero-subtitle {
     gap: 0.45rem;
 }
 
+.pill .icon {
+    width: 1rem;
+    height: 1rem;
+}
+
 /* Timeline */
 
 .timeline {
@@ -696,9 +718,9 @@ body.tool-page .hero-subtitle {
     position: absolute;
     top: 0;
     left: calc(var(--timeline-column) + var(--timeline-gap) * 0.5);
-    bottom: 0;
+    bottom: -1.5rem;
     width: 2px;
-    background: linear-gradient(to bottom, var(--primary), transparent 85%);
+    background: linear-gradient(to bottom, var(--primary), transparent 92%);
 }
 
 .timeline-item {
@@ -713,19 +735,20 @@ body.tool-page .hero-subtitle {
     font-weight: 700;
     color: var(--primary);
     font-size: clamp(1rem, 2vw, 1.12rem);
-    padding-right: calc(var(--timeline-gap) * 0.8);
+    padding-right: calc(var(--timeline-gap) + 1rem);
     position: relative;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
     text-align: right;
+    padding-top: 0.35rem;
 }
 
 .timeline-marker::after {
     content: "";
     position: absolute;
-    top: 50%;
-    right: calc(var(--timeline-gap) * -0.5);
+    top: 1.1rem;
+    right: calc(var(--timeline-gap) * -0.25);
     transform: translate(50%, -50%);
     width: 14px;
     height: 14px;
@@ -931,9 +954,16 @@ body.tool-page .hero-subtitle {
 }
 
 .card .icon {
-    font-size: 2rem;
+    width: 2.4rem;
+    height: 2.4rem;
     color: var(--accent);
     margin-bottom: 0.5rem;
+    display: inline-flex;
+}
+
+.card .icon svg {
+    width: 100%;
+    height: 100%;
 }
 
 .card h3 {
@@ -1016,9 +1046,13 @@ body.tool-page .hero-subtitle {
     border-radius: 12px;
     background: rgba(7, 11, 40, 0.75);
     color: #ffffff;
-    font-size: 1.2rem;
     backdrop-filter: blur(6px);
     box-shadow: 0 6px 16px rgba(7, 11, 40, 0.45);
+}
+
+.lab-icon svg {
+    width: 1.6rem;
+    height: 1.6rem;
 }
 
 .lab-card p {
@@ -1132,6 +1166,11 @@ body.dark .lab-card p {
     padding-bottom: 1.4rem;
 }
 
+.blog-link .icon {
+    width: 1rem;
+    height: 1rem;
+}
+
 #contact {
     position: relative;
     background: linear-gradient(135deg, rgba(77, 99, 255, 0.08), rgba(10, 17, 46, 0.08));
@@ -1242,6 +1281,12 @@ body.dark .contact-card {
     transition: color 0.3s ease;
 }
 
+.contact-link .icon,
+.contact-cta .icon {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
 body.dark .contact-link {
     color: var(--accent);
 }
@@ -1319,6 +1364,11 @@ body.dark .contact-link:hover {
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn .icon {
+    width: 1.1rem;
+    height: 1.1rem;
 }
 
 .btn:hover {
@@ -1428,6 +1478,16 @@ footer {
     }
     .timeline::before {
         left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #theme-toggle,
+    #language-toggle {
+        right: 0.8rem;
+    }
+    #language-toggle {
+        top: 4rem;
     }
 }
 
