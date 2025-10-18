@@ -3,146 +3,473 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr&nbsp;HDK&nbsp;| Cybersecurity, AI &amp; DevSecOps</title>
-    <!-- Modern Google font for a clean look -->
+    <title>Youssef&nbsp;Haddouk&nbsp;| Cybersecurity, Audit &amp; Embedded Innovation</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pQeb5jAkFrXdYpfr6qytn+7vfVbNvUrP1hdE+e2PFMqPZe8VdZVSf0y99aHJH98nnY1JX1LX0kC73BMAzEhegQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Theme toggle button -->
-    <button id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+<body data-language="en">
+    
+    <button id="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon" aria-hidden="true">
+            <svg class="icon sun-icon"><use href="assets/icons.svg#icon-sun"></use></svg>
+            <svg class="icon moon-icon"><use href="assets/icons.svg#icon-moon"></use></svg>
+        </span>
+        <span class="toggle-label" data-i18n="controls.theme">Shift&nbsp;Mode</span>
+        <span class="toggle-glow"></span>
+    </button>
+    <button id="language-toggle" aria-label="Basculer la langue">
+        <span class="toggle-icon flag-icons" aria-hidden="true">
+            <svg class="icon flag-icon flag-en"><use href="assets/icons.svg#icon-flag-en"></use></svg>
+            <svg class="icon flag-icon flag-fr"><use href="assets/icons.svg#icon-flag-fr"></use></svg>
+        </span>
+        <span class="toggle-label" id="language-toggle-label">FR</span>
+        <span class="toggle-glow"></span>
+    </button>
 
-    <!-- Hero section -->
     <header id="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="accent">Mr&nbsp;HDK</span></h1>
-            <p class="tagline">Cybersecurity expert &amp; DevSecOps enthusiast<br>AI &amp; full‑stack developer</p>
-            <a href="#about" class="btn primary-btn">Learn&nbsp;More</a>
+        <div class="hero-inner">
+            <div class="hero-media">
+                <div class="portrait-frame">
+                    <span class="portrait-glow"></span>
+                    <img src="assets/youssef-portrait.png" alt="Portrait of Youssef Haddouk" loading="lazy">
+                    <div class="portrait-badges">
+                        <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-shield"></use></svg> <span data-i18n="hero.badge1">Cyber&nbsp;Defense</span></span>
+                        <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-robot"></use></svg> <span data-i18n="hero.badge2">QA&nbsp;Automation</span></span>
+                        <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-microchip"></use></svg> <span data-i18n="hero.badge3">Embedded&nbsp;Security</span></span>
+                    </div>
+                </div>
+                <div class="hero-orbits" aria-hidden="true">
+                    <span>SOC&nbsp;Ops</span>
+                    <span>IoT&nbsp;Security</span>
+                    <span>Scripting&nbsp;Ops</span>
+                    <span>Audit&nbsp;Advisory</span>
+                </div>
+            </div>
+            <div class="hero-content">
+                <p class="location"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-location"></use></svg> <span data-i18n="hero.location">Tunisia · Remote-friendly</span></p>
+                <h1><span class="first-name" data-i18n="hero.firstName">Youssef</span> <span class="last-name" data-i18n="hero.lastName">Haddouk</span></h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Cybersecurity strategist, audit &amp; consulting lead, QA automation specialist, and embedded/IoT security engineer.</p>
+                <div class="hero-roles">
+                    <span data-i18n="hero.role1">Blue &amp; Purple Teaming</span>
+                    <span data-i18n="hero.role2">Cybersecurity Audit &amp; Consulting</span>
+                    <span data-i18n="hero.role3">Hardware &amp; IoT Hardening</span>
+                    <span data-i18n="hero.role4">Vibe&nbsp;Coding&nbsp;Full&nbsp;Stack</span>
+                </div>
+                <p class="hero-bio" data-i18n="hero.bio">I combine SOC leadership, cybersecurity consulting clinics, and hardware-aware engineering to secure platforms end-to-end. From Azure pipelines to STM32 labs, every mission blends audit programmes, scripting resilience, and guided coaching.</p>
+                <div class="hero-actions">
+                    <a href="#mission" class="btn primary-btn scroll-btn">
+                        <span data-i18n="hero.ctaPrimary">Enter&nbsp;Mission&nbsp;Deck</span>
+                        <span class="btn-icon-circle down-rocket" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#icon-rocket"></use></svg></span>
+                    </a>
+                    <a href="https://github.com/Mr-HDK" target="_blank" class="btn secondary-btn">
+                        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-github"></use></svg>
+                        <span data-i18n="hero.ctaSecondary">View&nbsp;Code&nbsp;Labs</span>
+                    </a>
+                </div>
+                <div class="hero-highlights">
+                    <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-trophy"></use></svg> <span data-i18n="hero.highlight1">Top 0.1% · TryHackMe</span></span>
+                    <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-briefcase"></use></svg> <span data-i18n="hero.highlight2">Audit &amp; Advisory Missions</span></span>
+                    <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-laptop"></use></svg> <span data-i18n="hero.highlight3">SOC &amp; DevSecOps Builder</span></span>
+                    <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-code"></use></svg> <span data-i18n="hero.highlight4">Assembler &amp; 12+ Scripting Dialects</span></span>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Fixed navigation bar -->
     <nav id="navbar">
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#tools">Tools</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#mission" data-i18n="nav.mission">Mission</a></li>
+            <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#skill-nebula" data-i18n="nav.skills">Skill&nbsp;Nebula</a></li>
+            <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#achievements" data-i18n="nav.highlights">Highlights</a></li>
+            <li><a href="#certifications" data-i18n="nav.certifications">Certifications</a></li>
+            <li><a href="#blog" data-i18n="nav.blog">Blog</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Main content sections -->
     <main>
-        <!-- About section -->
-        <section id="about" class="section">
-            <h2>About&nbsp;Me</h2>
-            <p>
-                Passionate about securing systems and demystifying complex technologies,
-                I bring several years of experience in&nbsp;<strong>cybersecurity</strong> and
-                <strong>DevSecOps</strong>. From developing secure cloud infrastructures
-                to integrating AI into threat detection, I enjoy building solutions that
-                are both robust and innovative. When I'm not hardening systems, you'll
-                find me exploring machine learning algorithms or contributing to open‑source projects.
-            </p>
-        </section>
-
-        <!-- Skills section -->
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-title"><i class="fa-solid fa-shield-halved"></i> Cybersecurity</div>
-                    <div class="progress"><div class="progress-bar" style="width:90%" data-width="90"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-title"><i class="fa-solid fa-robot"></i> Artificial&nbsp;Intelligence</div>
-                    <div class="progress"><div class="progress-bar" style="width:75%" data-width="75"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-title"><i class="fa-solid fa-lock"></i> DevSecOps</div>
-                    <div class="progress"><div class="progress-bar" style="width:85%" data-width="85"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-title"><i class="fa-solid fa-code"></i> Development</div>
-                    <div class="progress"><div class="progress-bar" style="width:80%" data-width="80"></div></div>
-                </div>
+        <section id="mission" class="section">
+            <h2 data-i18n="mission.title">Mission&nbsp;Deck</h2>
+            <p data-i18n="mission.body">Armed with a Master's in Information Systems Security and hands-on leadership across SOC, audit consulting, DevSecOps, and automation initiatives, I help teams ship resilient products faster. My playground spans Azure-powered Kubernetes fleets and STM32 boards, where I design experiences that are secure, observable, and human-friendly.</p>
+            <div class="stat-grid" data-animate="stats">
+                <article class="stat-card">
+                    <span class="stat-number" data-target="20">0</span>
+                    <span class="stat-label" data-i18n="mission.stat1">Security tools mastered</span>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-number" data-target="15">0</span>
+                    <span class="stat-label" data-i18n="mission.stat2">Programming, scripting &amp; automation dialects</span>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-number" data-target="7">0</span>
+                    <span class="stat-label" data-i18n="mission.stat3">Domains delivered end-to-end</span>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-number" data-target="8">0</span>
+                    <span class="stat-label" data-i18n="mission.stat4">Cloud &amp; DevOps platforms deployed</span>
+                </article>
+            </div>
+            <div class="mission-pills">
+                <span class="pill"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-shield-heart"></use></svg> <span data-i18n="mission.pill1">Incident Response</span></span>
+                <span class="pill"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-gears"></use></svg> <span data-i18n="mission.pill2">Test Automation Strategy</span></span>
+                <span class="pill"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-diagram"></use></svg> <span data-i18n="mission.pill3">Infrastructure as Code</span></span>
+                <span class="pill"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-wave"></use></svg> <span data-i18n="mission.pill4">Embedded &amp; IoT R&amp;D</span></span>
+                <span class="pill"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-user-shield"></use></svg> <span data-i18n="mission.pill5">Hardware Security</span></span>
+                <span class="pill"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-file"></use></svg> <span data-i18n="mission.pill6">Security Audits</span></span>
             </div>
         </section>
 
-        <!-- Projects section -->
+        <section id="experience" class="section">
+            <h2 data-i18n="experience.title">Experience&nbsp;&amp;&nbsp;Teaching</h2>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-marker"><span data-i18n="experience.oss.dates">February&nbsp;2025&nbsp;–&nbsp;Present</span></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="experience.oss.title">Sahara and Sahel Observatory (OSS)</h3>
+                        <h4 data-i18n="experience.oss.role">Information Systems Security Officer</h4>
+                        <ul>
+                            <li data-i18n="experience.oss.point1">Hardened infrastructure, orchestrated incident response, and led digital forensics for mission-critical environments.</li>
+                            <li data-i18n="experience.oss.point2">Ran penetration testing, cyber audits, and risk analyses while steering security policy enforcement and asset management.</li>
+                            <li data-i18n="experience.oss.point3">Championed cybersecurity awareness with advisory clinics for leadership and delivery teams.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-marker"><span data-i18n="experience.isi.dates">February&nbsp;2024&nbsp;–&nbsp;August&nbsp;2024</span></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="experience.isi.title">Higher Institute of Computer Science (ISI)</h3>
+                        <h4 data-i18n="experience.isi.role">Adjunct Lecturer · Test Automation</h4>
+                        <ul>
+                            <li data-i18n="experience.isi.point1">Taught Ceedling, GCOV, Robot Framework, and TDD practices to engineering cohorts.</li>
+                            <li data-i18n="experience.isi.point2">Led workshops on coverage analytics, edge-case discovery, and memory overflow mitigation.</li>
+                            <li data-i18n="experience.isi.point3">Mentored QA projects with industry-ready automation strategies and scripting accelerators.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-marker"><span data-i18n="experience.datahorizon.dates">February&nbsp;2024&nbsp;–&nbsp;February&nbsp;2025</span></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="experience.datahorizon.title">DATAHORIZON</h3>
+                        <h4 data-i18n="experience.datahorizon.role">QA Automation Engineer</h4>
+                        <ul>
+                            <li data-i18n="experience.datahorizon.point1">Engineered Cypress, Selenium, and JMeter frameworks integrated with Azure DevOps pipelines.</li>
+                            <li data-i18n="experience.datahorizon.point2">Expanded coverage and speed with Snyk and Acunetix scans woven into SSDLC guardrails.</li>
+                            <li data-i18n="experience.datahorizon.point3">Collaborated on QA consulting, code reviews, and documentation playbooks for teams.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-marker"><span data-i18n="experience.aptyx.dates">February&nbsp;2022&nbsp;–&nbsp;July&nbsp;2022</span></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="experience.aptyx.title">APTYX</h3>
+                        <h4 data-i18n="experience.aptyx.role">Embedded &amp; Mobile Engineer</h4>
+                        <ul>
+                            <li data-i18n="experience.aptyx.point1">Built a modular real-time irrigation controller on STM32 with Android-based visualization.</li>
+                            <li data-i18n="experience.aptyx.point2">Crafted Firebase-backed telemetry for live dashboards, alerts, and hardware security.</li>
+                            <li data-i18n="experience.aptyx.point3">Optimized embedded code paths for deterministic performance and maintainability.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-marker"><span data-i18n="experience.freelance.dates">January&nbsp;2020&nbsp;–&nbsp;September&nbsp;2023</span></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="experience.freelance.title">Freelance · Fiverr</h3>
+                        <h4 data-i18n="experience.freelance.role">Web Developer &amp; Security Consultant</h4>
+                        <ul>
+                            <li data-i18n="experience.freelance.point1">Delivered high-performing web experiences with CMS builds, accessibility, and UX polish.</li>
+                            <li data-i18n="experience.freelance.point2">Conducted security audits, OWASP testing, and remediation roadmaps for clients.</li>
+                            <li data-i18n="experience.freelance.point3">Provided long-term maintenance, optimization, and cybersecurity coaching.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+            <div class="education-callout">
+                <h3 data-i18n="experience.educationTitle">Academic Launchpad</h3>
+                <p data-i18n="experience.educationBody">Master's in Information Systems Security (2024) and Bachelor's in Embedded Systems (2022) — both earned at the Higher Institute of Computer Science (ISI) — anchor my cross-domain approach across security, software, and hardware.</p>
+            </div>
+        </section>
+
+        <section id="skill-nebula" class="section">
+            <h2 data-i18n="skills.title">Skill&nbsp;Nebula</h2>
+            <p data-i18n="skills.body">Select a constellation to explore how scripting, hardware security, IoT security, and full-stack craft intersect across missions.</p>
+            <div class="nebula-grid">
+                <aside class="nebula-panel">
+                    <div class="nebula-buttons" id="nebula-buttons"></div>
+                    <div class="nebula-info">
+                        <h3 id="nebula-title"></h3>
+                        <p id="nebula-tagline"></p>
+                        <div class="nebula-meta">
+                            <div>
+                                <h4><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-code"></use></svg> <span data-i18n="skills.languages">Languages &amp; Scripts</span></h4>
+                                <div class="tag-cloud" id="nebula-languages"></div>
+                            </div>
+                            <div>
+                                <h4><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-toolbox"></use></svg> <span data-i18n="skills.tools">Tooling Arsenal</span></h4>
+                                <div class="tag-cloud" id="nebula-tools"></div>
+                            </div>
+                            <div>
+                                <h4><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-bullseye"></use></svg> <span data-i18n="skills.focus">Mission Focus</span></h4>
+                                <div class="tag-cloud" id="nebula-focus"></div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <div class="nebula-space" id="nebula-space" aria-live="polite"></div>
+            </div>
+        </section>
+
         <section id="projects" class="section">
-            <h2>Projects</h2>
+            <h2 data-i18n="projects.title">Projects</h2>
             <div class="cards-grid">
-                <div class="card">
-                    <div class="icon"><i class="fa-solid fa-network-wired"></i></div>
-                    <h3>Secure Network Monitor</h3>
-                    <p>A real‑time network traffic analyzer built with Python and Rust. Implements anomaly detection using machine learning to flag unusual patterns.</p>
-                    <a href="https://github.com/mr-hdk/project1" target="_blank" class="btn secondary-btn">View on GitHub</a>
-                </div>
-                <div class="card">
-                    <div class="icon"><i class="fa-solid fa-cloud"></i></div>
-                    <h3>Cloud&nbsp;Guard&nbsp;CI</h3>
-                    <p>Automated CI/CD pipeline template that integrates static analysis, container scanning and infrastructure as code validation.</p>
-                    <a href="https://github.com/mr-hdk/project2" target="_blank" class="btn secondary-btn">View on GitHub</a>
-                </div>
-                <div class="card">
-                    <div class="icon"><i class="fa-solid fa-brain"></i></div>
-                    <h3>Threat&nbsp;Intel&nbsp;AI</h3>
-                    <p>An AI‑powered threat intelligence dashboard that correlates feeds from multiple sources and recommends mitigation steps.</p>
-                    <a href="#" class="btn secondary-btn disabled" aria-disabled="true">Coming Soon</a>
-                </div>
+                <article class="card">
+                    <div class="icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-cloud"></use></svg></div>
+                    <h3 data-i18n="projects.aks.title">AKS DevSecOps Migration</h3>
+                    <p data-i18n="projects.aks.body">Containerized a legacy 3-tier solution, optimized Dockerfiles, and codified infrastructure with Terraform. Wired Azure DevOps pipelines with ArgoCD for continuous delivery and security gates.</p>
+                    <a href="https://github.com/Mr-HDK" target="_blank" class="btn secondary-btn" data-i18n="projects.aks.cta">Explore Repos</a>
+                </article>
+                <article class="card">
+                    <div class="icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-shield"></use></svg></div>
+                    <h3 data-i18n="projects.soc.title">Home&nbsp;Lab&nbsp;SOC</h3>
+                    <p data-i18n="projects.soc.body">Built a defensive playground combining Snort IDS/IPS, Cowrie honeypots, Splunk dashboards, and hardened SSH to experiment with detections and threat hunting.</p>
+                    <a href="https://medium.com/@MrHDK" target="_blank" class="btn secondary-btn" data-i18n="projects.soc.cta">Read Lab Notes</a>
+                </article>
+                <article class="card">
+                    <div class="icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-network"></use></svg></div>
+                    <h3 data-i18n="projects.tls.title">TLS Feature ETL</h3>
+                    <p data-i18n="projects.tls.body">Created a Bash ETL pipeline with Tshark &amp; SplitCap to extract TLS session intelligence into CSV for anomaly detection research.</p>
+                    <span class="badge" data-i18n="projects.tls.badge">Shell · Data Engineering</span>
+                </article>
+                <article class="card">
+                    <div class="icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-microchip"></use></svg></div>
+                    <h3 data-i18n="projects.irrigation.title">Intelligent Irrigation</h3>
+                    <p data-i18n="projects.irrigation.body">Developed STM32-based irrigation control with Android visualization and Firebase sync, orchestrating resilient embedded UX.</p>
+                    <span class="badge" data-i18n="projects.irrigation.badge">STM32 · Android · Firebase</span>
+                </article>
+                <article class="card">
+                    <div class="icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-robot"></use></svg></div>
+                    <h3 data-i18n="projects.pixel.title">Pixel&nbsp;Automation&nbsp;Bot</h3>
+                    <p data-i18n="projects.pixel.body">Automated creative tasks with PyAutoGUI, blending computer vision heuristics and macros for productivity boosts.</p>
+                    <span class="badge" data-i18n="projects.pixel.badge">Python · Automation</span>
+                </article>
+                <article class="card">
+                    <div class="icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-link"></use></svg></div>
+                    <h3 data-i18n="projects.shortener.title">Golang URL Shortener</h3>
+                    <p data-i18n="projects.shortener.body">Built a performant, secure short-link service with observability hooks and API-first design.</p>
+                    <span class="badge" data-i18n="projects.shortener.badge">Go · REST · Security</span>
+                </article>
             </div>
         </section>
 
-        <!-- Tools section -->
+        <section id="achievements" class="section">
+            <h2 data-i18n="achievements.title">Highlights &amp; Impact</h2>
+            <div class="achievement-grid">
+                <article class="achievement-card">
+                    <h3><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-flag"></use></svg> <span data-i18n="achievements.ctf.title">CTF Vanguard</span></h3>
+                    <p data-i18n="achievements.ctf.body">Ranked in the <strong>top 0.1%</strong> globally on TryHackMe through relentless offensive and defensive experimentation.</p>
+                </article>
+                <article class="achievement-card">
+                    <h3><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-database"></use></svg> <span data-i18n="achievements.hackathon.title">Hackathon Laureate</span></h3>
+                    <p data-i18n="achievements.hackathon.body">Secured 3<sup>rd</sup> place at Hackathon 24 Hours (SPOT) with a resilient medication alert platform spanning data design and responsive delivery.</p>
+                </article>
+                <article class="achievement-card">
+                    <h3><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-laptop"></use></svg> <span data-i18n="achievements.devsecops.title">Secure DevOps Accelerator</span></h3>
+                    <p data-i18n="achievements.devsecops.body">Embedded Snyk, Acunetix, and IaC checks inside delivery pipelines to uplift SSDLC maturity without slowing innovation.</p>
+                </article>
+                <article class="achievement-card">
+                    <h3><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-satellite"></use></svg> <span data-i18n="achievements.soc.title">SOC Explorer</span></h3>
+                    <p data-i18n="achievements.soc.body">Designed a home SOC with Snort, Cowrie, and Splunk to craft bespoke detections and accelerate incident readiness.</p>
+                </article>
+            </div>
+        </section>
+
         <section id="tools" class="section">
-            <h2>Tools</h2>
-            <p>Here are some handy utilities I've built for everyday tasks:</p>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
-                    <h3>Base64 Converter</h3>
-                    <p>Encode or decode text to and from Base64.</p>
-                    <a href="tools/base64.html" class="btn secondary-btn">Use Tool</a>
-                </div>
-                <div class="card">
-                    <div class="icon"><i class="fa-solid fa-fingerprint"></i></div>
-                    <h3>Hash Generator</h3>
-                    <p>Create SHA‑256 hashes of strings for checksums or password hashing.</p>
-                    <a href="tools/hash.html" class="btn secondary-btn">Use Tool</a>
-                </div>
+            <h2 data-i18n="tools.title">Interactive&nbsp;Labs</h2>
+            <p data-i18n="tools.body">Hands-on utilities I crafted to support day-to-day analysis, auditing, and experimentation.</p>
+            <div class="labs-grid">
+                <article class="lab-card">
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1580894906472-2f994fa95b9c?auto=format&fit=crop&w=480&q=80" alt="Data streams abstract visual" loading="lazy">
+                        <span class="lab-icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-sync"></use></svg></span>
+                    </div>
+                    <h3 data-i18n="tools.base64.title">Base64 Converter</h3>
+                    <p data-i18n="tools.base64.body">Encode or decode text to and from Base64 for quick payload inspections.</p>
+                    <a href="tools/base64.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
+                </article>
+                <article class="lab-card">
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=480&q=80" alt="Fingerprint scanner hologram" loading="lazy">
+                        <span class="lab-icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-fingerprint"></use></svg></span>
+                    </div>
+                    <h3 data-i18n="tools.hash.title">Hash Generator</h3>
+                    <p data-i18n="tools.hash.body">Create SHA‑256 hashes of strings for checksums or credential testing.</p>
+                    <a href="tools/hash.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
+                </article>
+                <article class="lab-card">
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1580894896868-65b1d592cd96?auto=format&fit=crop&w=480&q=80" alt="Digital identity illustration" loading="lazy">
+                        <span class="lab-icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-id"></use></svg></span>
+                    </div>
+                    <h3 data-i18n="tools.jwt.title">JWT Inspector</h3>
+                    <p data-i18n="tools.jwt.body">Decode JSON Web Tokens safely to review headers, claims, and signing context.</p>
+                    <a href="tools/jwt.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
+                </article>
+                <article class="lab-card">
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=480&q=80" alt="Colorful server lights" loading="lazy">
+                        <span class="lab-icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-waveform"></use></svg></span>
+                    </div>
+                    <h3 data-i18n="tools.uuid.title">UUID Forge</h3>
+                    <p data-i18n="tools.uuid.body">Generate traceable batches of UUIDv4 identifiers for lab systems and test data.</p>
+                    <a href="tools/uuid.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
+                </article>
+                <article class="lab-card">
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=480&q=80" alt="Cybersecurity shield hologram" loading="lazy">
+                        <span class="lab-icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-shield-split"></use></svg></span>
+                    </div>
+                    <h3 data-i18n="tools.password.title">Password Pulse</h3>
+                    <p data-i18n="tools.password.body">Measure password entropy, hints, and remediation ideas instantly.</p>
+                    <a href="tools/password.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
+                </article>
+                <article class="lab-card">
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1580894906409-984ebc9b7df2?auto=format&fit=crop&w=480&q=80" alt="Network topology blueprint" loading="lazy">
+                        <span class="lab-icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-route"></use></svg></span>
+                    </div>
+                    <h3 data-i18n="tools.cidr.title">CIDR Navigator</h3>
+                    <p data-i18n="tools.cidr.body">Map network ranges, host capacity, and broadcast zones from CIDR blocks.</p>
+                    <a href="tools/cidr.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
+                </article>
+                <article class="lab-card">
+                    <div class="lab-visual">
+                        <img src="https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=480&q=80" alt="URL connection visualization" loading="lazy">
+                        <span class="lab-icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-link"></use></svg></span>
+                    </div>
+                    <h3 data-i18n="tools.url.title">URL&nbsp;Encoder</h3>
+                    <p data-i18n="tools.url.body">Encode or decode URLs to debug webhook calls and HTTP payloads.</p>
+                    <a href="tools/urlencode.html" class="btn tertiary-btn" data-i18n="tools.use">Use Tool</a>
+                </article>
             </div>
         </section>
 
-        <!-- Blog section -->
-        <section id="blog" class="section">
-            <h2>Blog</h2>
-            <p>Stay tuned for articles covering cybersecurity best practices,
-               AI breakthroughs and DevSecOps tips. I'm working on
-               insightful posts that will be published here soon.</p>
+        <section id="certifications" class="section">
+            <h2 data-i18n="certs.title">Certifications &amp; Learning Signals</h2>
+            <p data-i18n="certs.body">Continuous learning keeps my radar sharp. Here are a few recent validations.</p>
+            <div class="cert-grid">
+                <article class="cert-card">
+                    <h3 data-i18n="certs.iso.title">ISO&nbsp;27001 Lead Auditor</h3>
+                    <p data-i18n="certs.iso.body">PECB · 2025</p>
+                </article>
+                <article class="cert-card">
+                    <h3 data-i18n="certs.early.title">Early Warning Systems Design</h3>
+                    <p data-i18n="certs.early.body">BRLi · 2025</p>
+                </article>
+                <article class="cert-card">
+                    <h3 data-i18n="certs.nlp.title">Transformer-based NLP Apps</h3>
+                    <p data-i18n="certs.nlp.body">NVIDIA · 2024</p>
+                </article>
+                <article class="cert-card">
+                    <h3 data-i18n="certs.sc900.title">SC-900 Security Fundamentals</h3>
+                    <p data-i18n="certs.sc900.body">Microsoft · 2024</p>
+                </article>
+                <article class="cert-card">
+                    <h3 data-i18n="certs.devnet.title">DevNet Associate</h3>
+                    <p data-i18n="certs.devnet.body">Cisco · 2024</p>
+                </article>
+                <article class="cert-card">
+                    <h3 data-i18n="certs.cloud.title">Cybersecurity with Cloud Computing</h3>
+                    <p data-i18n="certs.cloud.body">NASBA · 2023</p>
+                </article>
+                <article class="cert-card">
+                    <h3 data-i18n="certs.crypto.title">Cryptography &amp; Network Security</h3>
+                    <p data-i18n="certs.crypto.body">IIBA · 2023</p>
+                </article>
+            </div>
         </section>
 
-        <!-- Contact section -->
+        <section id="blog" class="section">
+            <h2 data-i18n="blog.title">Blog</h2>
+            <p data-i18n="blog.body">Snapshots from reverse engineering drills, threat research, and automation experiments.</p>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="https://medium.com/@MrHDK/scanned-and-scammed-inside-a-qr-code-spear-phishing-attack-aaf49011a929?source=og_image" alt="QR code spear-phishing investigation" loading="lazy">
+                    <span class="blog-tag" data-i18n="blog.post1.tag">Threat Intel</span>
+                    <h3 data-i18n="blog.post1.title">Scanned and Scammed: Inside a QR Code Spear-Phishing Attack</h3>
+                    <p data-i18n="blog.post1.body">Dissecting a social engineering lure that weaponizes QR codes and evades casual inspection.</p>
+                    <a href="https://medium.com/@MrHDK/scanned-and-scammed-inside-a-qr-code-spear-phishing-attack-aaf49011a929" target="_blank" class="blog-link"><span data-i18n="blog.post1.cta">Read the investigation</span> <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-external"></use></svg></a>
+                </article>
+                <article class="blog-card">
+                    <img src="https://medium.com/@MrHDK/a-comprehensive-malware-analysis-deobfuscating-and-analyzing-a-captive-recaptcha-attack-ba44df6aae07?source=og_image" alt="Malware analysis of captive reCAPTCHA attack" loading="lazy">
+                    <span class="blog-tag" data-i18n="blog.post2.tag">Malware Lab</span>
+                    <h3 data-i18n="blog.post2.title">Deobfuscating a Captive reCAPTCHA Attack</h3>
+                    <p data-i18n="blog.post2.body">Peeling back layers of obfuscation to understand a persistent malware delivery campaign.</p>
+                    <a href="https://medium.com/@MrHDK/a-comprehensive-malware-analysis-deobfuscating-and-analyzing-a-captive-recaptcha-attack-ba44df6aae07" target="_blank" class="blog-link"><span data-i18n="blog.post2.cta">Review the teardown</span> <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-external"></use></svg></a>
+                </article>
+                <article class="blog-card">
+                    <img src="https://medium.com/@MrHDK/try-hack-me-writeup-chrome-e1ba7d80914b?source=og_image" alt="TryHackMe Chrome write-up" loading="lazy">
+                    <span class="blog-tag" data-i18n="blog.post3.tag">CTF&nbsp;Ops</span>
+                    <h3 data-i18n="blog.post3.title">TryHackMe Write-up: Chrome</h3>
+                    <p data-i18n="blog.post3.body">Step-by-step methodology for unraveling the Chrome box while sharpening browser exploit skills.</p>
+                    <a href="https://medium.com/@MrHDK/try-hack-me-writeup-chrome-e1ba7d80914b" target="_blank" class="blog-link"><span data-i18n="blog.post3.cta">Read the walkthrough</span> <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-external"></use></svg></a>
+                </article>
+                <article class="blog-card">
+                    <img src="https://medium.com/@MrHDK/critical-security-alert-microsoft-outlook-vulnerability-cve-2024-21413-471656ea9eef?source=og_image" alt="Microsoft Outlook CVE-2024-21413 analysis" loading="lazy">
+                    <span class="blog-tag" data-i18n="blog.post4.tag">Vulnerability&nbsp;Watch</span>
+                    <h3 data-i18n="blog.post4.title">Microsoft Outlook CVE-2024-21413: Critical Security Alert</h3>
+                    <p data-i18n="blog.post4.body">Breaking down exploitation paths and hardening moves for a high-impact Outlook flaw.</p>
+                    <a href="https://medium.com/@MrHDK/critical-security-alert-microsoft-outlook-vulnerability-cve-2024-21413-471656ea9eef" target="_blank" class="blog-link"><span data-i18n="blog.post4.cta">Inspect the alert</span> <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-external"></use></svg></a>
+                </article>
+            </div>
+        </section>
+
         <section id="contact" class="section">
-            <h2>Get&nbsp;In&nbsp;Touch</h2>
-            <p>If you'd like to collaborate or just say hello,
-               feel free to reach out through the channels below.</p>
-            <ul class="contact-list">
-                <li><i class="fa-solid fa-envelope"></i> <a href="mailto:example@domain.com">example@domain.com</a></li>
-                <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Mr-HDK" target="_blank">GitHub</a></li>
-                <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a></li>
-            </ul>
-            <a href="resume/mr-hdk_Resume.pdf" class="btn primary-btn" download>Download&nbsp;Resume</a>
+            <h2 data-i18n="contact.title">Get&nbsp;In&nbsp;Touch</h2>
+            <p class="contact-intro" data-i18n="contact.body">Ready for a mission sync, audit sprint, or security consultation? Let’s build something resilient together.</p>
+            <div class="contact-grid">
+                <article class="contact-card">
+                    <h3><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-radar"></use></svg> <span data-i18n="contact.card1.title">Mission Control</span></h3>
+                    <p data-i18n="contact.card1.body">Co-design resilient systems, automation blueprints, or embedded security upgrades with actionable roadmaps.</p>
+                    <a href="https://cal.com/youssef-haddouk/mission-sync" target="_blank" class="contact-link">
+                        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-calendar"></use></svg>
+                        <span data-i18n="contact.card1.cta">Book a mission sync</span>
+                    </a>
+                </article>
+                <article class="contact-card">
+                    <h3><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-link"></use></svg> <span data-i18n="contact.card2.title">Connect &amp; Collaborate</span></h3>
+                    <p data-i18n="contact.card2.body">Sync on SOC initiatives, audit programmes, DevSecOps journeys, or QA accelerators.</p>
+                    <a href="https://linkedin.com/in/youssefhaddouk" target="_blank" class="contact-link">
+                        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-linkedin"></use></svg>
+                        <span data-i18n="contact.card2.cta">LinkedIn</span>
+                    </a>
+                </article>
+                <article class="contact-card">
+                    <h3><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-code"></use></svg> <span data-i18n="contact.card3.title">Explore the Labs</span></h3>
+                    <p data-i18n="contact.card3.body">Dive into GitHub experiments, vibe coding prototypes, and tooling kits for daily ops.</p>
+                    <a href="https://github.com/Mr-HDK" target="_blank" class="contact-link">
+                        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-github"></use></svg>
+                        <span data-i18n="contact.card3.cta">GitHub</span>
+                    </a>
+                </article>
+                <article class="contact-card">
+                    <h3><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-book"></use></svg> <span data-i18n="contact.card4.title">Read the Field Notes</span></h3>
+                    <p data-i18n="contact.card4.body">Follow reverse engineering logs, threat write-ups, and teaching moments from the field.</p>
+                    <a href="https://medium.com/@MrHDK" target="_blank" class="contact-link">
+                        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-medium"></use></svg>
+                        <span data-i18n="contact.card4.cta">Medium</span>
+                    </a>
+                </article>
+            </div>
+            <a href="https://linkedin.com/in/youssefhaddouk" target="_blank" class="btn primary-btn contact-cta">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-paper-plane"></use></svg>
+                <span data-i18n="contact.cta">Open&nbsp;a&nbsp;LinkedIn&nbsp;DM</span>
+            </a>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy;&nbsp;<span id="year"></span>&nbsp;Mr&nbsp;HDK. Built with <span class="heart">&#10084;&#65039;</span></p>
+        <p>&copy;&nbsp;<span id="year"></span>&nbsp;<span data-i18n="footer.name">Mr&nbsp;HDK</span>. <span data-i18n="footer.built">Built with</span> <span class="heart">&#10084;&#65039;</span></p>
     </footer>
 
     <script src="script.js"></script>

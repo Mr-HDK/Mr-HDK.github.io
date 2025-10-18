@@ -6,14 +6,24 @@
     <title>Hash Generator · Mr&nbsp;HDK</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pQeb5jAkFrXdYpfr6qytn+7vfVbNvUrP1hdE+e2PFMqPZe8VdZVSf0y99aHJH98nnY1JX1LX0kC73BMAzEhegQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <button id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
-    <header id="hero" style="height: 40vh; background: linear-gradient(135deg, var(--primary), var(--primary-dark));">
-        <div class="hero-content">
-            <h1>SHA‑256 Hash Generator</h1>
-            <p class="tagline">Generate cryptographic hashes effortlessly</p>
+<body class="tool-page">
+    <button id="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon" aria-hidden="true">
+            <svg class="icon sun-icon"><use href="../assets/icons.svg#icon-sun"></use></svg>
+            <svg class="icon moon-icon"><use href="../assets/icons.svg#icon-moon"></use></svg>
+        </span>
+        <span class="toggle-label">Shift&nbsp;Mode</span>
+        <span class="toggle-glow"></span>
+    </button>
+    <header id="hero" class="hero-mini">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-title-stack">
+                    <h1>SHA‑256 Hash Generator</h1>
+                    <p class="hero-subtitle">Generate cryptographic fingerprints for integrity checks and secure automation.</p>
+                </div>
+            </div>
         </div>
     </header>
     <nav id="navbar">

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIDR Navigator · Mr&nbsp;HDK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="tool-page">
+    <button id="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon" aria-hidden="true">
+            <svg class="icon sun-icon"><use href="../assets/icons.svg#icon-sun"></use></svg>
+            <svg class="icon moon-icon"><use href="../assets/icons.svg#icon-moon"></use></svg>
+        </span>
+        <span class="toggle-label">Shift&nbsp;Mode</span>
+        <span class="toggle-glow"></span>
+    </button>
+    <header id="hero" class="hero-mini">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-title-stack">
+                    <h1>CIDR Navigator</h1>
+                    <p class="hero-subtitle">Map network ranges, broadcast zones, and usable host counts instantly.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#cidr">Calculator</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="cidr" class="section">
+            <h2>Calculate&nbsp;Range</h2>
+            <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <article class="card">
+                    <h3>Input CIDR</h3>
+                    <input id="cidrInput" type="text" placeholder="192.168.10.0/24" />
+                    <button class="btn primary-btn" onclick="calculateCIDR()">Analyze</button>
+                    <p class="badge">Supports IPv4 CIDR notation.</p>
+                    <p id="cidrError" style="color: var(--accent);"></p>
+                </article>
+                <article class="card">
+                    <h3>Network&nbsp;Details</h3>
+                    <ul id="cidrDetails"></ul>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;&nbsp;<span id="year"></span>&nbsp;Mr&nbsp;HDK</p>
+    </footer>
+    <script src="../script.js"></script>
+    <script>
+        function ipToInt(ip) {
+            const parts = ip.split('.');
+            if (parts.length !== 4) return null;
+            let result = 0;
+            for (const part of parts) {
+                const num = Number(part);
+                if (!Number.isInteger(num) || num < 0 || num > 255) {
+                    return null;
+                }
+                result = (result << 8) + num;
+            }
+            return result >>> 0;
+        }
+
+        function intToIp(num) {
+            return [
+                (num >>> 24) & 255,
+                (num >>> 16) & 255,
+                (num >>> 8) & 255,
+                num & 255
+            ].join('.');
+        }
+
+        function calculateCIDR() {
+            const input = (document.getElementById('cidrInput').value || '').trim();
+            const errorEl = document.getElementById('cidrError');
+            const detailsEl = document.getElementById('cidrDetails');
+            detailsEl.innerHTML = '';
+            errorEl.textContent = '';
+
+            if (!input) {
+                errorEl.textContent = 'Please provide a CIDR block (e.g., 10.0.0.0/24).';
+                return;
+            }
+
+            const [ipPart, prefixPart] = input.split('/');
+            const prefix = Number(prefixPart);
+            const ipInt = ipToInt(ipPart || '');
+
+            if (ipInt === null || !Number.isInteger(prefix) || prefix < 0 || prefix > 32) {
+                errorEl.textContent = 'Invalid CIDR notation.';
+                return;
+            }
+
+            const mask = prefix === 0 ? 0 : (~0 << (32 - prefix)) >>> 0;
+            const network = ipInt & mask;
+            const broadcast = prefix === 32 ? ipInt : network | (~mask >>> 0);
+            const hostBits = 32 - prefix;
+            let usableHosts;
+            if (prefix >= 31) {
+                usableHosts = Math.max(0, Math.pow(2, hostBits));
+            } else {
+                usableHosts = Math.pow(2, hostBits) - 2;
+            }
+
+            const firstHost = prefix >= 31 ? network : network + 1;
+            const lastHost = prefix >= 31 ? broadcast : broadcast - 1;
+
+            const entries = [
+                ['Network', intToIp(network)],
+                ['Netmask', intToIp(mask)],
+                ['Broadcast', intToIp(broadcast)],
+                ['Usable hosts', usableHosts.toLocaleString()],
+                ['First host', prefix === 32 ? intToIp(network) : intToIp(firstHost)],
+                ['Last host', prefix === 32 ? intToIp(network) : intToIp(lastHost)]
+            ];
+
+            entries.forEach(([label, value]) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${label}:</strong> ${value}`;
+                detailsEl.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
