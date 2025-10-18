@@ -478,9 +478,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const updateLanguageUI = () => {
     document.body.dataset.language = currentLanguage;
-    document.documentElement.lang = currentLanguage === 'fr' ? 'fr' : 'en';
+    document.documentElement.lang = currentLanguage === 'fr' ? 'en' : 'fr';
     if (languageToggleLabel) {
-      languageToggleLabel.textContent = currentLanguage === 'en' ? 'FR' : 'EN';
+      languageToggleLabel.textContent = currentLanguage === 'en' ? 'EN' : 'FR';
     }
     if (languageToggle) {
       languageToggle.setAttribute(

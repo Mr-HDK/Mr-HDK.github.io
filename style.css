@@ -408,12 +408,12 @@ body.dark #navbar {
 }
 
 .down-rocket .icon {
-    transform: rotate(135deg);
+    transform: rotate(0deg);
     transition: transform 0.4s ease;
 }
 
 .scroll-btn:hover .down-rocket .icon {
-    transform: rotate(135deg) translateY(4px);
+    transform: rotate(180deg) translateY(-2px);
 }
 
 .hero-highlights {
@@ -483,7 +483,7 @@ body.dark #navbar {
     z-index: 3;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 0.55rem;
+    gap: 1.1rem;
     justify-items: center;
     align-items: center;
 }
@@ -492,18 +492,19 @@ body.dark #navbar {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0.85rem;
+    gap: 0.3rem;
+    padding: 0.35rem 0.58rem;
     border-radius: 999px;
     background: rgba(8, 12, 40, 0.72);
     color: rgba(243, 247, 255, 0.92);
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     letter-spacing: 0.04em;
     backdrop-filter: blur(12px);
     box-shadow: 0 12px 30px rgba(2, 8, 30, 0.4);
     text-align: center;
     min-height: 2.6rem;
     text-wrap: balance;
+
 }
 
 .portrait-badges .icon,
